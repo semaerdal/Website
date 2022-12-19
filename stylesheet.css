@@ -2,47 +2,61 @@
     
      background-color: #264842;
      overflow: hidden;
+     
 }
 
-.topnav .icon {
-    display: none;
-  }
 
-  
+
 ul{
+    
     list-style-type: none;
     display:flex;
     align-items: center;
     justify-content: space-evenly;
-    line-height: 40px;
-    text-align: center;
+    text-align:justify;
     
-
+    
+    
 }
+
 
 li{
+
     background-color: #67A89C; 
     color:#D0DBD8;
     padding: 10px 10px ; 
-    font-size: 15px;
-    border-radius: 20px;
-   
+    font-size: 20px;
+
 }
 
-.navbar a {
-    background-color: #67A89C; 
+a:visited{
+
     color:#D0DBD8;
+}
+
+
+
+.navbar a {
+    
+    
     text-decoration:none ;
     padding: 10px 10px ; 
-    font-size: 15px;
-    border-radius: 10px;
+    font-size: 20px;
+    
+    
   }
-  
-  li :hover {
+
+  ul :hover {
+    
     background-color: #9beddc;
     color: black;
 
 }
+  
+.icon{
+    color:  #9beddc;;
+}
+
 
 
 

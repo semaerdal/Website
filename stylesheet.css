@@ -1,11 +1,77 @@
+.navbar{
+     background-color: #264842;
+     overflow: hidden;
+}
 
-.Logo{
+.topnav .icon {
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
     
-   /* padding: 5px  10px;*/
-   height: 40px;
+    
+  }
+
+ul{
+    list-style-type: none;
+    text-align: center;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+   
+    line-height: 40px;
+    text-align: center;
+    padding: 5px  5px;
 
 }
 
+li{
+    background-color: #67A89C; 
+    color:#D0DBD8;
+    text-decoration:none ;
+    padding: 10px 10px ; 
+    font-size: 15px;
+    border-radius: 20px;
+   
+}
+.navbar a {
+    background-color: #67A89C; 
+    color:#D0DBD8;
+    text-decoration:none ;
+    padding: 10px 10px ; 
+    font-size: 15px;
+    border-radius: 10px;
+  }
+
+li a:hover {
+    background-color: #9beddc;
+    color: black;
+
+}
+
+.active {
+    background-color: #9beddc;
+    color: black;
+
+}
+
+img{
+    max-width: 100%;
+}
+
+
+
+/*
+.Logo{
+    
+   
+  
+}
+
+
+img{
+    max-width: 100%;
+}
 .menu {
     text-align: center;
     display:flex;
@@ -35,7 +101,7 @@
 }
 
 
-/* Änder Farben beim hovern beim Menu */
+/* Änder Farben beim hovern beim Menu 
 .menu a:hover {
     background-color: #9beddc;
     color: black;
@@ -53,7 +119,7 @@
         margin-left: auto;
 }
 
-      /*sollte immer den button highlighten auf der man auf de seite ist-- nochmal rüberschauen ka obs funktioniert */
+      /*sollte immer den button highlighten auf der man auf de seite ist-- nochmal rüberschauen ka obs funktioniert 
       menu a:hover:not(.active) {
         background-color: #111;
     }
@@ -62,4 +128,4 @@
         background-color: #4CAF50;
     }
 
-    
+    */

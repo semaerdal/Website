@@ -8,7 +8,32 @@
     <!-- Icon am Fenster-->
 
     <link rel="stylesheet" href="stylesheet.css" />
+    <link rel="stylesheet" href="shop.css">
     <!--Link zum Stylesheet-->
+
+            <!-- E-Book  Bild tauschen -->
+    <script type="text/javascript">
+
+              function tausch(){
+            //  document.getElementById('meinBild').setAttribute("src", "Bilder\ARGT3506.jpg " );
+            var hund = document.getElementsByName('meinBild')[0];
+
+            if(hund.src == "file:///C:/Users/JMelc/Bilder/E-Book1.jpg"){
+              hund.src = "file:///C:/Users/JMelc/Bilder/E-Book1.jpg";
+            }
+            else {
+              hund.src ="file:///C:/Users/JMelc/Bilder/E.jpg";
+            }
+
+              }
+              </script>
+
+
+
+
+
+
+
   </head>
 
   <body>
@@ -20,16 +45,41 @@
          <li><a href="Informationsbereich.html">Informationen</a></li>
          <li><a href="TippsundTricks.html">TippsundTricks</a></li>
          <li><a href="Shop.html">Shop</a></li>
-         <li><a href="Login.html">Login</a></li>  
-      
+         <li><a href="Login.html">Login</a></li>
+
          <div class="navbar-right">
          <li><a href="#" class="icon">&#9776; </a></li>
-               
+
      </ul>
-        
+
    </nav>
    </div>
 
+
+<div Name="Kategorie_Ueberschrift"  >
+  Kategorie
+
+</div>
+<div Name="E-Book">
+  E-Book
+   >
+
+  <div Name= " Bild">
+    <img src="file:///C:/Users/JMelc/Bilder/E-Book1.jpg" alt="E-Book Bild" Name="E-Book" width="50px" height="auto" onclick="tausch(this)">
+  </div>
+  </div>
+
+
+
+  <div Name="Beschreibung">
+
+
+
+  <div Name="Warenkorb">
+  </div>
+
+
+</div>
 
   </body>
 </html>

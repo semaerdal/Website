@@ -1,0 +1,27 @@
+.Kategorie_Ueberschrift{
+ background-color: #67A89C;
+
+}
+
+.E-Book{
+ color: #D0DBD8;
+
+}
+.Bild{
+  color: #67A89C;
+}
+.Beschreibung{
+ background-color: #D0DBD8;
+}
+.Warenkorb{
+ background-color:  #67A89C;
+}
+
+.Kategorie_Ueberschrift .E-Book .Beschreibung .Warenkorb {
+  display: flex;
+  height: 5%;
+  width: 80%;
+  lign-items: center;
+  justify-content: space-evenly;
+  text-align:justify;
+}

@@ -1,27 +1,71 @@
-.Kategorie_Ueberschrift{
- background-color: #67A89C;
+body, html {
+   height: 100%;                    //damit die links navigationsleiste bis nach ganz unten geht
+   }
+
+.navbar-right{
 
 }
 
-.E-Book{
+.navbar-left{
+  margin-left: 5%;
+
+  background-color: #67A89C;
+  height: 100%;
+  weight:20px;
+  width: 15%;
+  padding-top: 40%;
+
+
+
+
+}
+
+.E-Book, .Book{
+ color: #D0DBD8;
+ font-family:Verdana, Geneva, sans-serif;
+ text-align: center;
+ padding-top: 20%;
+ text-decoration: none;
+
+
+}
+
+
+
+
+.container{
+ background: #67A89C;
+ width: 32%;
+  margin: 10%;
+  margin-left: 20%;
+  padding: 20px;
+  height: 20%;
+  weight:20px;
+  box-sizing: border-box;
+  display: flex;
+  overflow: hidden;
+} 
+
+.Kategorie_Ueberschrift{
+  font-family:Verdana, Geneva, sans-serif;
  color: #D0DBD8;
 
+ margin-left: 40%;
+
+ margin-top: 20px;
+
 }
+
+
 .Bild{
   color: #67A89C;
+  margin-left: 20%;
+
 }
 .Beschreibung{
  background-color: #D0DBD8;
+ margin
 }
 .Warenkorb{
  background-color:  #67A89C;
-}
-
-.Kategorie_Ueberschrift .E-Book .Beschreibung .Warenkorb {
-  display: flex;
-  height: 5%;
-  width: 80%;
-  lign-items: center;
-  justify-content: space-evenly;
-  text-align:justify;
 }

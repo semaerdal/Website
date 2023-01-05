@@ -13,18 +13,18 @@ body {
 }
 
 .navbar-left{
-  margin-left: 5%;
+  margin-left: 9%;
 
   background-color: #CDD3C4;
 
 
-  width: 15%;
+  width: 10%;
   padding-top: 15%;
-  min-height:100%;
-  height:auto !important;
-  height:110%;
+
+  height:100%;
   color: #132727;                                                         // geht das nicht
   text-decoration: none;
+  top: 86px;
 
 
 
@@ -47,10 +47,10 @@ body {
   background-color: #798D90;
   height: 1050px;
   position:absolute;
-  top: 15%;
+  top: 86px;
   bottom: 0%;
-  left: 30%;
-  right: 5%;
+  left: 25%;
+  right: 15%;
 }
 
 .Kategorie_name{
@@ -163,17 +163,51 @@ body {
 }
 
 .Lieferstatus, .Lieferstatus2 {
-  bottom: 10%;
+  bottom: 5%;
   position: absolute;
-  right: 30%;
+  right: 35%;
   background-color: #CDD3C4;
+  height: 10%;
+  width: 25%;
+  text-align: center;
+  font-family:Verdana ;
+
 }
 
 .Warenkorb, .Warenkorb2{
-  bottom: 10%;
-  right: 10%;
+  bottom: 5%;
+  right: 3%;
   position: absolute;
   background-color: #CDD3C4;
+  height: 10%;
+  width: 30%;
+  text-align: center;
 
                                                         //background-color:  #67A89C;
+}
+
+button {
+display: inline-block;
+background-color: #CDD3C4;
+
+
+border: 0px;
+text-align: center;
+//font-size: 28px;
+padding: 5%;
+width: 100%;
+
+
+cursor: pointer;
+
+}
+
+.Faden{
+
+  position:absolute;
+  top: 86px;
+
+  right: 1%;
+  z-index: -1;
+
 }

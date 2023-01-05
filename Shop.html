@@ -42,6 +42,20 @@
       else
       {
         document.getElementById("eins").style.display = "block";
+/* schauen 
+        <?php
+			if( isset($_GET['zahl']) )
+			{
+				$zaehler = $_GET['zahl'] +1;
+			}
+			else
+			{
+				$zaehler = 1;
+			}
+			echo '<a href="?zahl='.$zaehler.'">Klick mich</a>';
+			echo "<br />";
+			echo "Die Zahl lautet: ".$zaehler;
+		?>	*/
       }
       hidden = !hidden;
     }
@@ -54,7 +68,7 @@
 
     function hideOrShow1()
     {
-      if(hidden)
+      if(!hidden)
       {
         document.getElementById("eins1").style.display = "none";
       }

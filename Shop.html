@@ -29,14 +29,50 @@
               </script>
 
 
+  <script type="text/javascript">
+    //funktion div einbleinden und ausblenden
+  var hidden = false;
 
+    function hideOrShow()
+    {
+      if(hidden)
+      {
+        document.getElementById("eins").style.display = "none";
+      }
+      else
+      {
+        document.getElementById("eins").style.display = "block";
+      }
+      hidden = !hidden;
+    }
 
+  </script>
+
+  <script type="text/javascript">
+    //funktion div einbleinden und ausblenden
+  var hidden = false;
+
+    function hideOrShow1()
+    {
+      if(hidden)
+      {
+        document.getElementById("eins1").style.display = "none";
+      }
+      else
+      {
+        document.getElementById("eins1").style.display = "block";
+      }
+      hidden = !hidden;
+    }
+
+  </script>
 
 
 
   </head>
 
   <body>
+
     <div class="navbar">
     <nav>
       <ul>
@@ -58,21 +94,27 @@
 
  <Div class ="navbar-left">
 
-    <div class ="E-Book"><a href= > E-Buch </a> </div>  <!-- hinspringen zum nächsten produkt -->
-    <div class ="Book"><a href= > Buch </a> </div>  <!-- hinspringen zum nächsten produkt -->
+    <div class ="E-Book"  ><a href="#Buch1" > E-Buch </a> </div>  <!-- hinspringen zum nächsten produkt -->
+    <div class ="Book" ><a href="#Buch2" > Buch </a> </div>  <!-- hinspringen zum nächsten produkt -->
 
 
  </div>
 
  <div class="dunkleumrandung" >
 
-<div class = Kategorie>
+
+   <div class="Kategorie_name" > <h1> Bücher </h1>  </div>
+
+<div class = Kategorie id="Buch1">
 </div>
 <div class="container"  >
 <div class="Kategorie_Ueberschrift"  >
-      <h2>  Kategorie </h2>
+      <h2>  E-Buch </h2>
 </div>
 <div class="Warenkorbbild">
+<div class="eins" id="eins"> 1
+</div>
+
 <img src="Icons\Warenkorb.png" alt="Warenkorb Bild"  width="100%" height="auto" >
 </div>
 
@@ -89,21 +131,94 @@
 
 
   <div class="Beschreibung" >
-    <div  >hier produkt beschreibung</div>
+    <div  > <p> In diesen Buch haben wir Informationen zusammengetragen die sich um Fast-Fashion und um Umweltschutzt handelt.
+       Das Buch ist Perfekt für Leute die Mehr über das Thema wissen möchten und beinhaltet Triks und Tipps.
+        Das hier ist eine E-Book ausgabe und ist beim kauf dirkt Erhältlich.</p> </div>
 
   </div>
   <div class="Warenkorb">
-    <button type="button">Warenkorb</button>
+    <button type="button" onclick="hideOrShow();">Warenkorb</button>
   </div>
   <div class="Lieferstatus">
-    Lieferstatus
+    direkt Erhältlich
   </div>
-
-
-
 
 
 </div>
+
+
+
+
+
+
+
+
+
+
+
+<div class = Kategorie2 >
+</div>
+<div class="container2"  >
+<div class="Kategorie_Ueberschrift2"  >
+      <h2>  gebundenes Buch </h2>
+</div>
+<div class="Warenkorbbild2">
+  <div class="eins1" id="eins1"> 1
+  </div>
+
+<img src="Icons\Warenkorb.png" alt="Warenkorb Bild"  width="100%" height="auto" >
+</div>
+
+
+
+
+  <div class= " Bild2">
+    <img src="Icons\Zeichenfläche 1.png" alt="E-Book Bild" Name="E-Book" width="100%" height="auto" onclick="tausch(this)">
+  </div>
+
+
+
+
+
+
+  <div class="Beschreibung2" >
+    <div > <p>In diesen Buch haben wir Informationen zusammengetragen die sich um Fast-Fashion und um Umweltschutzt handelt.
+       Das Buch ist Perfekt für Leute die Mehr über das Thema wissen möchten und beinhaltet Triks und Tipps.
+        Das hier ist eine gebundene Ausgabe. Diese wird inerhalb 5-7 Werktagen verschickt.</p></div>
+
+  </div>
+  <div class="Warenkorb2">
+    <button type="button" onclick="hideOrShow1();" >Warenkorb</button>
+  </div>
+  <div class="Lieferstatus2"  id="Buch2">
+    5-7 Werktage
+  </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </div>
   </body>

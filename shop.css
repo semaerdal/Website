@@ -22,8 +22,8 @@ body {
   padding-top: 15%;
   min-height:100%;
   height:auto !important;
-  height:100%;
-  color: #132727;
+  height:110%;
+  color: #132727;                                                         // geht das nicht
   text-decoration: none;
 
 
@@ -31,19 +31,21 @@ body {
 
 }
 
+
 .E-Book, .Book{
- color: #132727;
+ color: #132727;                                                      // geht das nicht
  font-family:Verdana, Geneva, sans-serif;
  text-align: center;
  padding-top: 10%;
  text-decoration: none;
+ text-decoration-color: #132727;
 
 
 
 }
 .dunkleumrandung{
   background-color: #798D90;
-  height: 100%;
+  height: 1050px;
   position:absolute;
   top: 15%;
   bottom: 0%;
@@ -51,6 +53,19 @@ body {
   right: 5%;
 }
 
+.Kategorie_name{
+  font-family:Verdana, Geneva, sans-serif;
+ color: #132727;
+ background-color: #F0F2E7;
+ height: 5%;
+ margin-top: 5%;
+ display: absolute;
+ text-align: center;
+ width: 84%;
+ margin-left: 8%;
+
+
+}
 
 
 
@@ -60,11 +75,28 @@ body {
   margin: 5%;
 
   padding: 2%;
-  height: 50%;
+  height: 35%;
   weight:20px;
   display: flex;
   position:absolute;
-  top: 10%;
+  top: 8%;
+  background-color: #F0F2E7;
+  color:#132727;
+  margin-left: 8%;
+
+
+}
+.container2{
+
+ width: 80%;
+  margin: 5%;
+
+  padding: 2%;
+  height: 35%;
+  weight:20px;
+  display: flex;
+  position:absolute;
+  top: 50%;
   background-color: #F0F2E7;
   color:#132727;
   margin-left: 8%;
@@ -72,7 +104,7 @@ body {
 
 }
 
-.Kategorie_Ueberschrift{
+.Kategorie_Ueberschrift, .Kategorie_Ueberschrift2{
   font-family:Verdana, Geneva, sans-serif;
  color: #132727;
  background-color: #CDD3C4;
@@ -83,21 +115,36 @@ body {
  margin-left: 40%;
 
 }
-.Warenkorbbild{
+.Warenkorbbild, .Warenkorbbild2 {
   margin-top: 0%;
   position: absolute;
   right: 2%;
   width: 5%;
   height: 5%;
 }
+.eins, .eins1{
+  position: absolute;
+  color: #132727;
+  width: 20px;
+   height: 20px;
+   background-color:red;
+  border: 1px solid #132727;
+   text-align: center;
+   border-radius: 100px;
+   font-family:Verdana ;
+   top: 120%;
+   right: 70%;
+  display: none;
+}
 
-.Beschreibung{
- background-color: yellow;
+.Beschreibung, .Beschreibung2{
   height: 60%;
   position:absolute;
   margin-top: 60px;
   margin-left: 38%;
   width: 57%;
+  background-color: #CDD3C4;
+  font-family:Verdana ;
 
 
 }
@@ -105,27 +152,28 @@ body {
 
 
 
-.Bild{
+.Bild, .Bild2{
   color: #67A89C;
   left: 10px;
- margin-left: 1%;
+  margin-left: 1%;
   background-color: #798D90;
   position: absolute;
   height: 90%;
   width: 35%;
 }
 
-.Lieferstatus{
+.Lieferstatus, .Lieferstatus2 {
   bottom: 10%;
   position: absolute;
-  background-color: pink;
   right: 30%;
+  background-color: #CDD3C4;
 }
 
-.Warenkorb{
+.Warenkorb, .Warenkorb2{
   bottom: 10%;
   right: 10%;
   position: absolute;
+  background-color: #CDD3C4;
 
                                                         //background-color:  #67A89C;
 }

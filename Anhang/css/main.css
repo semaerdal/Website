@@ -1,0 +1,221 @@
+/*  spezielle Eigenschaften */
+:root{
+    
+    --light-color: #fff;
+    --light-color-alt: #afb6cd;
+    --primary-background-color:#F0F2E7;
+    --secondary-background-color: #132727;   
+    --hover-light-color: var(--light-color);
+    --hover-dark-color: var(--primary-background-color);
+    --font-family: Verdana, Geneva, sans-serif;
+    --font-size-sm: 1.6rem;
+    --font-size-md: 2.4rem;
+    --font-size-lg: 3rem;
+    --font-size-xl: 4rem;
+    --gap: 2rem;
+    --margin-sm: 2rem;
+    --margin-md: 3rem;
+   
+}
+
+/* Basis styles */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    
+    font-size: 62.5%;
+}
+
+body{
+    
+    font-family: var(--font-family);
+    font-size: var(--font-size-sm);
+    color: var(--light-color-alt);
+    background-color: var(--primary-background-color);
+    letter-spacing: 3px;
+}
+
+a{
+    /* Box-hintergundfarbe beim menü*/
+    /*background-color: #798b8f;
+    border-radius: 1rem;
+    padding: 0.8rem;*/
+    color: inherit;
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+input,
+button {
+  font: inherit;
+  color: inherit;
+  border: none;
+  background-color: transparent;
+}
+
+i{
+    font-size: var(--font-size-md);
+    
+}
+/* Theme Farben veraenderung */
+body.light-theme{
+    --light-color: #3d3d3d;
+    /* Farbe für Hintergrunf im dunkelmodus*/
+    --primary-background-color: #fff;
+    /* Farbe für NaviHintergrund im dunkelmodus*/
+    --secondary-background-color: #f1f1f1;
+    --hover-light-color: #fff;
+    --transparent-dark-color: var(--secondary-background-color);
+    /* Farbe für Schrift im dunkelmodus*/
+    --transparent-light-color: rgba(0,0,0,.1);
+}
+/* wiederbenutzbare Klassen */
+.container{
+    max-width: 160rem;
+    margin: 0 auto;
+    padding: 1.5rem;
+    
+}
+
+.place-items-center{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.screen-sm-hidden{
+    display: none;
+}
+/* Header */
+.header{
+    background-color: var(--secondary-background-color);
+    position: fixed;
+    width: 100%;
+    
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 1.5rem;
+}
+
+.logo{
+    font-size: var(--font-size-md);
+    color: var(--light-color);
+}
+
+.menu{
+    position: absolute;
+    top: 8.5rem;
+    right: 1.5rem;
+    width: 23rem;
+    padding: 1.5rem;
+    /* hintergrundfarbe für minimenü*/
+    background-color:#132727;
+    transform: scale(0);
+    transition: opacity .25s ease-in;
+}
+
+.list{
+    display: flex;
+    align-items: center;
+    gap: var(--gap);
+}
+
+.menu > .list{
+    flex-direction: column;
+}
+
+.list-link.current{
+    color: var(--light-color);
+}
+
+.close-menu-icon{
+    display: none;
+}
+
+.btn{
+    cursor: pointer;
+}
+
+.list-link:hover,
+.btn:hover,
+.btn:hover span{
+    color: var(--light-color);
+}
+
+.moon-icon,
+.light-theme .sun-icon{
+    display: none;
+}
+
+
+
+.light-theme .moon-icon{
+    display: block;
+}
+/* Header JavaScript Styles */
+.header.activated{
+    box-shadow: 0 1px .5rem var(--transparent-light-color);
+}
+
+.menu.activated{
+    box-shadow: 1px 1px 1rem var(--transparent-light-color);
+    opacity: 1;
+    transform: scale(1);
+}
+
+.menu-toggle-icon.activated .open-menu-icon{
+    display: none;
+}
+
+.menu-toggle-icon.activated .close-menu-icon{
+    display: block;
+}
+
+
+
+
+@media screen and (min-width: 1024px) {
+    .menu{
+        position: static;
+        width: initial;
+        padding: initial;
+        background-color: transparent;
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .menu > .list{
+        flex-direction: row;
+    }
+
+    .screen-lg-hidden{
+        display: none;
+    }
+
+    .screen-sm-hidden{
+        display: block;
+    }
+
+}
+
+.Faden{
+    position:absolute;
+    right: 1rem;
+    z-index: -1;
+  
+  }

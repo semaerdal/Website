@@ -1,0 +1,37 @@
+.blogs-section{
+    width: 100%;
+    padding: 50px 5vw;
+    display: grid;
+    grid-gap: 80px;
+}
+
+
+.blog-image{
+    float: left;
+    width: 33.33%;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 4rem;
+    margin-top: 5rem;
+}
+
+.blog-overview{
+    margin: 10px 0 20px;
+    line-height: 30px;
+}
+
+.btn.dark{
+    background: #afb6cd;
+    color: #131313;
+}
+
+/*.dunkleumrandung{
+    background-color: #798D90;
+    height: 1050px;
+    position:relative;
+   
+  }
+  */
+
+
+

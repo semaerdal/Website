@@ -2,7 +2,7 @@
 <html lang="de-de">
   <head>
     <meta charset="UTF-8" />
-    <title>Login</title>
+    <title>Produktuebersicht | Startseite</title>
 
     <!-- icon für den Tab -->
     <link rel="icon" href="./Anhang/images/favicon.png" />
@@ -10,12 +10,11 @@
     <!-- andere icons im Navigationsbereich -->
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
+      rel="stylesheet"/>
 
-    <!-- Custom styles -->
+    <!--stylesheets -->
     <link rel="stylesheet" href="./Anhang/css/main.css" />
-  </head>
+    <link rel="stylesheet" href="./Anhang/css/Startseite.css" />
 
   <body>
     <!-- Navigationsbereich -->
@@ -28,7 +27,7 @@
         <div class="menu" id="menu">
           <ul class="list">
             <li class="list-item">
-              <a href="./Startseite.html" class="list-link">Produktübersicht</a>
+              <a href="#" class="list-link current">Produktübersicht</a>
             </li>
             <li class="list-item">
               <a href="./Informationsbereich.html" class="list-link">Informationen</a>
@@ -41,7 +40,7 @@
             </li>
 
             <li class="list-item screen-lg-hidden">
-              <a href="#" class="list-link current">Login</a>
+              <a href="./Login.html" class="list-link">Login</a>
             </li>
           </ul>
         </div>
@@ -59,6 +58,7 @@
             class="btn place-items-center screen-lg-hidden menu-toggle-icon"
             id="menu-toggle-icon"
           >
+          
             <i class="ri-menu-3-line open-menu-icon"></i>
             <i class="ri-close-line close-menu-icon"></i>
           </button>
@@ -68,7 +68,7 @@
       </nav>
     </header>
 
-    <!-- Suche -->
+    
     <div class="search-form-container container" id="search-form-container">
       <button
         class="btn form-close-btn place-items-center"
@@ -76,14 +76,36 @@
       </button>
     </div>
 
+    
+    <!-- ENDE NAVIBEREICH -->
+
+
+    <!--Faden an der Seite-->
   </div>
   <div class="Faden">
   <img src="Icons\Faden.png"  height="1045px" >
   </div>
 
+
+
+
+  
+
+  <div class="dunkleumrandung" >
+    <section class="blogs-products">
+    <div class="blog-card">
+        <img src="./Anhang/images/top.jpeg" class="blog-image" >
+        <h1 class="blog-title">Lorem ipsum dolor sit amet consectetur.</h1>
+        <p class="blog-overview">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt incidunt fugiat quos porro repellat harum. Adipisci tempora corporis rem cum.</p>
+        <a href="/" class="btn dark">read</a>
+    </div>
+</section>
+  </div>
+
+  
+
     <!-- script link -->
-    <script src="./Anhang/js/main.js">
-    </script>
+    <script src="./Anhang/js/main.js"></script>
+
   </body>
 </html>
-

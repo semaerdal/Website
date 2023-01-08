@@ -2,7 +2,7 @@
 const selectElement = (selector) => {
     const element = document.querySelector(selector);
     if(element) return element;
-    throw new Error(`Something went wrong! Make sure that ${selector} exists/is typed correctly.`);  
+    throw new Error(`Something went wrong! Make sure that ${selector} exists/is typed correctly.`);
 };
 
 //Nav styles on scroll
@@ -49,17 +49,19 @@ if (currentTheme) {
     body.classList.add('light-theme');
 }
 
-themeToggleBtn.addEventListener('click', function () {
+//themeToggleBtn.addEventListener('click', function () {
     // Add light theme on click
-    body.classList.toggle('light-theme');
+//    body.classList.toggle('light-theme');
 
     // If the body has the class of light theme then add it to local Storage, if not remove it
-    if (body.classList.contains('light-theme')) {
-        localStorage.setItem('currentTheme', 'themeActive');
-    } else {
-        localStorage.removeItem('currentTheme');
-    }
-});
+
+
+// if (body.classList.contains('light-theme')) {
+//        localStorage.setItem('currentTheme', 'themeActive');
+//    } else {
+//        localStorage.removeItem('currentTheme');
+//    }
+//});
 
 // Swiper
 const swiper = new Swiper(".swiper", {
@@ -86,5 +88,5 @@ const swiper = new Swiper(".swiper", {
         1200: {
             slidesPerView: 3
         }
-    }   
+    }
 });

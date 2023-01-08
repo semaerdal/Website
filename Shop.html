@@ -32,16 +32,31 @@
   <script type="text/javascript">
     //funktion div einbleinden und ausblenden
   var hidden = false;
-
-    function hideOrShow()
+  var hidden2 = false;
+    function hideOrShow(name)
     {
-      if(hidden)
+      if(name == "button1"){
+        hidden = !hidden;
+      }
+      if(name == "button2"){
+        hidden2 = !hidden2;
+      }
+      if((hidden&&!hidden2)||(hidden2&&!hidden))
       {
+        document.getElementById("zwei").style.display = "none";
+        document.getElementById("zwei1").style.display = "none";
+        document.getElementById("eins").style.display = "block";
+        document.getElementById("eins1").style.display = "block";
+      } else if (hidden&&hidden2) {
         document.getElementById("eins").style.display = "none";
+        document.getElementById("eins1").style.display = "none";
+        document.getElementById("zwei").style.display = "block";
+        document.getElementById("zwei1").style.display = "block";
       }
       else
       {
-        document.getElementById("eins").style.display = "block";
+        document.getElementById("eins").style.display = "none";
+        document.getElementById("eins1").style.display = "none";
 /* schauen
         <?php
 			if( isset($_GET['zahl']) )
@@ -56,33 +71,10 @@
 			echo "<br />";
 			echo "Die Zahl lautet: ".$zaehler;
 		?>	*/
-      }
-      hidden = !hidden;
+  }
     }
 
   </script>
-
-  <script type="text/javascript">
-    //funktion div einbleinden und ausblenden
-  var hidden = false;
-
-    function hideOrShow1()
-    {
-      if(hidden)
-      {
-        document.getElementById("eins1").style.display = "none";
-      }
-      else
-      {
-        document.getElementById("eins1").style.display = "block";
-      }
-      hidden = !hidden;
-    }
-
-  </script>
-
-
-
   </head>
 
   <body>
@@ -128,6 +120,8 @@
 <div class="Warenkorbbild">
 <div class="eins" id="eins"> 1
 </div>
+<div class="zwei" id="zwei"> 2
+</div>
 
 <img src="Icons\Warenkorb.png" alt="Warenkorb Bild"  width="100%" height="auto" >
 </div>
@@ -151,7 +145,7 @@
 
   </div>
   <div class="Warenkorb">
-    <button type="button" onclick="hideOrShow();">Warenkorb</button>
+    <button type="button" id="button1" onclick="hideOrShow(this.id);">Warenkorb</button>
   </div>
   <div class="Lieferstatus">
     direkt Erhältlich
@@ -179,6 +173,8 @@
 <div class="Warenkorbbild2">
   <div class="eins1" id="eins1"> 1
   </div>
+  <div class="zwei1" id="zwei1"> 2
+  </div>
 
 <img src="Icons\Warenkorb.png" alt="Warenkorb Bild"  width="100%" height="auto" >
 </div>
@@ -202,7 +198,7 @@
 
   </div>
   <div class="Warenkorb2">
-    <button type="button" onclick="hideOrShow1();" >Warenkorb</button>
+    <button type="button"  id="button2" onclick="hideOrShow(this.id);" >Warenkorb</button>
   </div>
   <div class="Lieferstatus2"  id="Buch2">
     5-7 Werktage

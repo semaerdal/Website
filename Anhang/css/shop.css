@@ -1,39 +1,19 @@
-body, html {
-   height: 100%;                    //damit die links navigationsleiste bis nach ganz unten geht
-
-   }
-
-body {
-  background-color: #F0F2E7;
-}
-
-
-.navbar-right{
-
-}
 
 .navbar-left{
   margin-left: 9%;
-
   background-color: #CDD3C4;
-
-
   width: 10%;
   padding-top: 15%;
-
   height:100%;
-  color: #132727;                                                         // geht das nicht
+  color: #132727;                                                         /* geht das nicht*/
   text-decoration: none;
   top: 86px;
-
-
-
 
 }
 
 
 .E-Book, .Book{
- color: #132727;                                                      // geht das nicht
+ color: #132727;                                                      /* geht das nicht*/
  font-family:Verdana, Geneva, sans-serif;
  text-align: center;
  padding-top: 10%;
@@ -52,7 +32,7 @@ body {
   left: 25%;
   right: 15%;
 }
-
+/* macht das uneter überhaupt einen untersxhied?*/
 .Kategorie_name{
   font-family:Verdana, Geneva, sans-serif;
  color: #132727;
@@ -67,13 +47,12 @@ body {
 
 }
 
-
-
-.container{
+/* Der container blockiert den navibereich*/
+/* habs bissl gefixed*/
+.container1{
 
  width: 80%;
   margin: 5%;
-
   padding: 2%;
   height: 35%;
   weight:20px;
@@ -182,18 +161,18 @@ body {
   height: 10%;
   width: 30%;
   text-align: center;
-
-                                                        //background-color:  #67A89C;
+/*background-color:  #67A89C;*/
 }
-
-button {
+/* DIeser button macht probleme für den navibereich*/
+/* habs gefixed mit . einfügen und 1 nach button aber jetzt geht hover nicht*/
+.button1 {
 display: inline-block;
 background-color: #CDD3C4;
 
 
 border: 0px;
 text-align: center;
-//font-size: 28px;
+/*font-size: 28px;*/
 padding: 5%;
 width: 100%;
 

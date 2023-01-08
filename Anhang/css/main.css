@@ -1,20 +1,13 @@
-/*  spezielle Eigenschaften */
-:root{
-    
-    --light-color: #fff;
-    --light-color-alt: #afb6cd;
-    --primary-background-color:#F0F2E7;
+  /*  spezielle Eigenschaften */
+  :root{
+    --light-color: #131313;/* Farbe für aktuelle Seite*/
+    --light-color-alt:#eef3ec;/*Farbe bei den anderen Seiten*/
     --secondary-background-color: #132727;   
     --hover-light-color: var(--light-color);
-    --hover-dark-color: var(--primary-background-color);
     --font-family: Verdana, Geneva, sans-serif;
     --font-size-sm: 1.6rem;
     --font-size-md: 2.4rem;
-    --font-size-lg: 3rem;
-    --font-size-xl: 4rem;
-    --gap: 2rem;
-    --margin-sm: 2rem;
-    --margin-md: 3rem;
+    --gap: 5rem;
    
 }
 
@@ -41,9 +34,9 @@ body{
 
 a{
     /* Box-hintergundfarbe beim menü*/
-    /*background-color: #798b8f;
+    background-color: #798b8f;
     border-radius: 1rem;
-    padding: 0.8rem;*/
+    padding: 0.8rem;
     color: inherit;
     text-decoration: none;
 }
@@ -68,18 +61,7 @@ i{
     font-size: var(--font-size-md);
     
 }
-/* Theme Farben veraenderung */
-body.light-theme{
-    --light-color: #3d3d3d;
-    /* Farbe für Hintergrunf im dunkelmodus*/
-    --primary-background-color: #fff;
-    /* Farbe für NaviHintergrund im dunkelmodus*/
-    --secondary-background-color: #f1f1f1;
-    --hover-light-color: #fff;
-    --transparent-dark-color: var(--secondary-background-color);
-    /* Farbe für Schrift im dunkelmodus*/
-    --transparent-light-color: rgba(0,0,0,.1);
-}
+
 /* wiederbenutzbare Klassen */
 .container{
     max-width: 160rem;
@@ -219,3 +201,10 @@ body.light-theme{
     z-index: -1;
   
   }
+
+
+
+
+
+
+

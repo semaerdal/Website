@@ -1,122 +1,224 @@
-<html lang="de">
+<!DOCTYPE html>
+<html lang="de-de">
   <head>
-    <meta charset="UTF-8" />
-    <title> Vestium</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
     <title>Informationsbereich</title>
 
-    <link rel="shortcut icon" href="Icon Platzhalter.PNG" />
-    <!-- Icon am Fenster-->
+    <!-- icon für den Tab -->
+    <link rel="icon" href="./Anhang/images/favicon.png" />
 
-    <link rel="stylesheet" href="stylesheet.css" />
-    <!--Link zum Stylesheet-->
+    <!-- andere icons im Navigationsbereich -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="./Anhang/css/main.css" />
+    <link rel="stylesheet" href="./Anhang/css/Information.css" />
   </head>
+
   <body>
-    <header class="left">
-      
-      <div class="navbar">
-        <nav>
-          <ul>
-            <img src="Logo Vestium.png" alt="logo" width="auto" height="40"/></a>
-             <li><a href="ProduktÃ¼bersicht.html">Produkte</a></li>
-             <li><a href="Informationsbereich.html">Informationen</a></li>
-             <li><a href="TippsundTricks.html">TippsundTricks</a></li>
-             <li><a href="Shop.html">Shop</a></li>
-             <li><a href="Login.html">Login</a></li>  
-          
-             <div class="navbar-right">
-             <li><a href="#" class="icon">&#9776; </a></li>
-                   
-         </ul>
-            
-       </nav>
-       </div>
+    <!-- Navigationsbereich -->
+    <header class="header" id="header">
+      <nav class="navbar container">
+        <a href="./index.html">
+          <h2 class="logo">Vesticum</h2>
+        </a>
+
+        <div class="menu" id="menu">
+          <ul class="list">
+            <li class="list-item">
+              <a href="./index.html" class="list-link">Produktübersicht</a>
+            </li>
+            <li class="list-item">
+              <a href="#" class="list-link current">Informationen</a>
+            </li>
+            <li class="list-item">
+              <a href="./Shop.html" class="list-link">Shop</a>
+            </li>
+
+            <li class="list-item screen-lg-hidden">
+              <a href="./Login.html" class="list-link">Login</a>
+            </li>
+          </ul>
+        </div>
+
+
+          <button class="btn place-items-center" id="search-icon">
+          </button>
+
+          <button
+            class="btn place-items-center screen-lg-hidden menu-toggle-icon"
+            id="menu-toggle-icon"
+          >
+            <i class="ri-menu-3-line open-menu-icon"></i>
+            <i class="ri-close-line close-menu-icon"></i>
+          </button>
+
+          <a href="./Login.html" class="list-link screen-sm-hidden">Login</a>
+        </div>
+      </nav>
     </header>
 
-<style> 
-   .rechteck { 
-      height: 1000px; 
-      width: 225px; 
-      background-color: #ced3c6; 
-    } 
-  </style> 
-  <div class="rechteck"></div> 
+    <!-- Suche -->
+    <div class="search-form-container container" id="search-form-container">
+      <button
+        class="btn form-close-btn place-items-center"
+        id="form-close-btn">
+      </button>
+    </div>
+    <!-- ENDE NAVIBEREICH -->
 
 
-    <img
-    width="100"
-    height="1000"
-    src="Schnur.png"
-    alt="Rote Schnur"
-    style="float:right"
-  />
+    <!--Faden an der Seite-->
+  </div>
+  <div class="Faden">
+  <img src="./Icons/Faden.svg"  height="100%" >
+  </div>
+
+
+
+   <!-- Blogpost  -->
+   <section class="posts section">
+
+    <div class="container">
+
+        <h2 class="title section-title" data-name="posts">Produkte</h2>
+
+        <div class="posts-grid-wrapper d-grid">
+
+            <a href="#" class="article d-grid">
+                <div class="posts-article-image-wrapper">
+                    <img src="./Anhang/images/top.jpeg" alt="" class="article-image">
+                </div>
+
+                <div class="article-data-container">
+
+                    <div class="article-data">
+                        <span>23 Dez 2023</span>
+                        <span class="article-data-spacer"></span>
+                        <span>3 Min read</span>
+                    </div>
+
+                    <h3 class="title article-title">Beispiel Artiekl Text</h3>
+                    <p class="article-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique a tempore sapiente corporis, eaque fuga placeat odit voluptatibus.</p>
+
+                </div>
+            </a>
+
+            <a href="#" class="article d-grid">
+                <div class="posts-article-image-wrapper">
+                    <img src="./Anhang/images/favicon.png" alt="" class="article-image">
+                </div>
+
+                <div class="article-data-container">
+
+                    <div class="article-data">
+                        <span>23 Dez 2021</span>
+                        <span class="article-data-spacer"></span>
+                        <span>3 Min read</span>
+                    </div>
+
+                    <h3 class="title article-title">Beispiel Artiekl Text</h3>
+                    <p class="article-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique a tempore sapiente corporis, eaque fuga placeat odit voluptatibus.</p>
+
+                </div>
+            </a>
+
+            <a href="#" class="article d-grid">
+                <div class="posts-article-image-wrapper">
+                    <img src="./Anhang/images/favicon.png" alt="" class="article-image">
+                </div>
+
+                <div class="article-data-container">
+
+                    <div class="article-data">
+                        <span>23 Dec 2023</span>
+                        <span class="article-data-spacer"></span>
+                        <span>3 Min read</span>
+                    </div>
+
+                    <h3 class="title article-title">Beispiel Artiekl Text</h3>
+                    <p class="article-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique a tempore sapiente corporis, eaque fuga placeat odit voluptatibus.</p>
+
+                </div>
+            </a>
+
+            <a href="#" class="article d-grid">
+                <div class="posts-article-image-wrapper">
+                    <img src="./Anhang/images/top.jpeg" alt="" class="article-image">
+                </div>
+
+                <div class="article-data-container">
+
+                    <div class="article-data">
+                        <span>23 Dez 2023</span>
+                        <span class="article-data-spacer"></span>
+                        <span>3 Min read</span>
+                    </div>
+
+                    <h3 class="title article-title">Beispiel Artiekl Text</h3>
+                    <p class="article-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique a tempore sapiente corporis, eaque fuga placeat odit voluptatibus.</p>
+
+                </div>
+            </a>
+
+          
   
-    <section>
-      <h1>Investicum</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-        voluptua.
-      </p>
-    </section>
-    <section>
-      <h2>Unsere Services</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-        amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-        nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-        sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-        rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-        ipsum dolor sit amet.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-        amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-        nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-        sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-        rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-        ipsum dolor sit amet.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-        amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-        nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-        sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-        rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-        ipsum dolor sit amet.
-      </p>
-    </section>
-    <section>
-      <h2>So kontaktieren Sie uns</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-        amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-        nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-        sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-        rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-        ipsum dolor sit amet.
-      </p>
-    </section>
-    <footer>
-      <ul class="mitte">
-        <li>
-          Impressum
-        </li>
-      </ul>
-    </footer>
-  </body>
+
+</section>
+
+
+
+
+
+
+  <!-- Footer -->
+  <footer class="footer section">
+
+    <div class="footer-container container d-grid">
+        
+        <div class="company-data">
+            <a href="./Startseite.html">
+                <h2 class="logo">Vesticum</h2>
+            </a>
+            <p class="company-description">kurze beschreibung der Firma muss noxh gemacht werden</p>
+            
+          
+
+            <span class="copyright-notice">&copy;Vesticum. kleiner easter egg comment</span>
+        </div>
+
+      
+
+        
+
+        <div>
+            <h6 class="title footer-title">Mitglieder</h6>
+            
+            <ul class="footer-list list">
+                <li class="list-item">
+                    <a href="#" class="list-link">Sema Erdal</a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="list-link">Jenni </a>
+                </li>
+              
+            </ul>
+
+        </div>
+
+    </div>
+    
+</footer>
+
+
+
+
+
+<!-- script link -->
+<script src="./Anhang/js/main.js"></script>
+
+</body>
 </html>

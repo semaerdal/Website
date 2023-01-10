@@ -1,0 +1,321 @@
+
+:root{
+    --gap: 2rem;
+    --margin-sm: 2rem;
+    --margin-md: 3rem;
+    --item-min-height-sm: 20rem;
+    --item-min-height-md: 30rem;
+}
+
+
+
+/* macht den blog container unter navbar*/
+.section:not(.featured-articles){
+    padding-block: 5rem;
+}
+/*passt alles zum grid*/
+.d-grid{
+    display: grid;
+}
+
+/* Header */
+.header{
+    background-color: var(--secondary-background-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 1.5rem;
+}
+
+.logo{
+    font-size: var(--font-size-md);
+    color: var(--light-color);
+}
+
+.menu{
+    position: absolute;
+    top: 8.5rem;
+    right: 1.5rem;
+    width: 23rem;
+    padding: 1.5rem;
+    background-color:var(--secondary-background-color);
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity .25s ease-in;
+}
+
+.list{
+    display: flex;
+    align-items: center;
+    gap: var(--gap);
+}
+
+.menu > .list{
+    flex-direction: column;
+}
+
+.list-link.current{
+    color: var(--light-color);
+}
+
+.close-menu-icon{
+    display: none;
+}
+
+
+
+.list-link:hover{
+    color: var(--light-color);
+}
+
+
+
+
+/* Text produkt hinter kontainer  verstexkt es daamit  */
+.search-form-container{
+     position: fixed;
+}
+
+
+
+
+
+
+
+/*!!!!!!!!!!!!!!!! Größe anpassen container muss noch gemacht werden:,D!!!!!!!!!!!!!!!!!!!!!!!*/
+.article{
+    position: relative;
+    min-height: var(--item-min-height-md);
+}
+
+/*bild passt sich dem container an*/
+.article-image{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .25s;
+}
+
+
+.article-data-container{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 2rem 1.5rem;
+    background-color: var(--transparent-dark-color);
+    z-index: 10;
+    transition: background-color .5s;
+}
+
+/* schrift bleibt hell wenn man mit der masu rüber geht */
+.article:hover .article-data-container{
+    background-color: var(--hover-light-color);
+    color: var(--hover-dark-color);
+}
+
+.article:hover .article-data-spacer{
+    background-color: var(--hover-dark-color);
+}
+
+.article:hover .article-title{
+    color: var(--hover-dark-color);
+}
+
+/* 3mind read zentrerung*/
+.article-data{
+    display: flex;
+    align-items: center;
+    gap: var(--gap);
+    font-size: var(--font-size-xsm);
+    margin-bottom: 1rem;
+}
+
+/*abstand vom titel zum text und bild*/
+.article-data-spacer{
+    display: flex;
+    align-items: center;
+    gap: var(--gap);
+    font-size: var(--font-size-xsm);
+    margin-bottom: 2rem;
+}
+
+
+
+
+/* posts */
+
+.posts-grid-wrapper{
+    gap: var(--gap);
+}
+
+.posts-article-image-wrapper,
+.posts .article{
+    min-height: var(--item-min-height-sm);
+}
+
+.posts .article{
+    background-color: var(--secondary-background-color);
+}
+
+.posts-article-image-wrapper{
+    position: relative;
+}
+
+.posts-grid-wrapper .article-data-container{
+    position:inherit;
+   
+}
+
+.posts-grid-wrapper .article-title{
+    margin-bottom: var(--margin-sm);
+}
+
+
+
+
+
+.Faden{
+
+    top: -1px;
+    height: 80em;
+    margin-right: -16rem;
+   
+}
+
+/* Footer */
+.footer{
+    background-color: var(--secondary-background-color);
+}
+
+.footer-container{
+    gap: var(--gap);
+}
+
+.company-data{
+    display: flex;
+    flex-direction: column;
+    order: 1;
+}
+
+.company-description{
+    margin-block: var(--margin-sm);
+    max-width: 75%;
+}
+
+
+.copyright-notice{
+    opacity: .8;
+}
+
+.footer-list{
+    flex-direction: column;
+    align-items:flex-start;
+}
+
+.footer-title{
+    color: aliceblue;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    margin-bottom: var(--margin-sm);
+}
+
+
+
+
+@media screen and (min-width: 700px) {
+
+   
+
+    .form-container-inner{
+        align-items:stretch;
+    }
+
+    .footer-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .company-data{
+        order: 0;
+    }
+
+   
+}
+
+@media screen and (min-width: 768px) {
+
+    .posts .article{
+        grid-template-columns: 20rem 1fr;
+        
+    }
+
+    
+}
+
+
+@media screen and (min-width: 1024px) {
+   
+    .menu{
+        position: static;
+        width: initial;
+        padding: initial;
+        background-color: transparent;
+        opacity: 1;
+        transform: scale(1);
+        
+    }
+
+    .menu > .list{
+        flex-direction: row;
+    }
+
+    .screen-lg-hidden{
+        display: none;
+    }
+
+    .screen-sm-hidden{
+        display: block;
+    }
+
+    .sign-up-btn{
+        padding: 4px;
+    }
+   
+   
+
+   
+    .footer-container{
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .company-data{
+        grid-column: span 4;
+    }
+
+    .company-description{
+        max-width: 85%;
+    }
+
+    .copyright-notice{
+        margin-top: auto;
+    }
+
+   
+}
+
+
+
+
+
+
+  
+

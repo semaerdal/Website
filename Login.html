@@ -15,10 +15,45 @@
 
     <!-- Custom styles -->
     <link rel="stylesheet" href="./Anhang/css/main.css" />
+    <link rel="stylesheet" href="style/login.css">
+
+
+    <script type="text/javascript">
+
+      function speichernName() {
+        // Hole die Werte aus den Inputfeldern
+        var vorname = document.getElementById("vorname").value;
+      
+      
+        // Speichere die Werte im Local Storage
+        localStorage.setItem("vorname", vorname);
+      
+        // Speichere den Vornamen im Cookie
+        document.cookie = "vorname=" + vorname;
+      }
+      
+      // Beim Laden der Seite die letzten Eingaben aus dem Local Storage auslesen
+      window.onload = function() {
+        var vorname = localStorage.getItem("vorname");
+      
+      
+        if (vorname) {
+          // Gebe die letzten Eingaben
+          document.getElementById("vorname").value = vorname;         // hier direkt zum chat springen !!!!
+      
+          document.getElementById("ausgabe").innerHTML ="Willkommen zurück  " +  vorname;
+        }
+      }
+      
+        </script>
+
+
+
   </head>
 
   <body>
     <!-- Navigationsbereich -->
+    <!--
     <header class="header" id="header">
       <nav class="navbar container">
         <a href="./index.html">
@@ -67,19 +102,49 @@
         </div>
       </nav>
     </header>
-
+  -->
     <!-- Suche -->
+    <!--
     <div class="search-form-container container" id="search-form-container">
       <button
         class="btn form-close-btn place-items-center"
         id="form-close-btn">
       </button>
     </div>
+  -->
+  <div class="background">
+    <div class="shape"></div>
+    <div class="shape"></div>
+</div>
+
+    <div class="Loginfenster">
+        <div class="container">
+          <div class="text">Login  </div>
+      
+    <form>
+        <label for="Name"> Name </label>
+       <input type="text"  id="vorname" required  placeholder="Dein Name">   <!-- required ist dafür da das ein infor autauscht mit feld ausfüllen (fiunktioniert placeholder nicht mit required ??) -->
+
+      <input type="button" value="Login" onclick="speichernName();" >
+    </form>
+
+    <form action="location.href='awesomeChat\chat\index.html' ">      <!-- funktioniert nicht soll auf chat weiterleiten-->
+    <div id="ausgabe"></div>
+    </form>
+     </div>
+    </div>
+</div>
+
 
   </div>
   <div class="Faden">
   <img src="./Icons/Faden.svg"  height="1045px" >
   </div>
+  
+  <div class="background">
+    <div class="shape"></div>
+    <div class="shape"></div>
+</div>
 
     <!-- script link -->
     <script src="./Anhang/js/main.js">

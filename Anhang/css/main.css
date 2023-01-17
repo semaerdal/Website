@@ -8,8 +8,14 @@
     --font-size-sm: 1.6rem;
     --font-size-md: 2.4rem;
     --gap: 5rem;
+    /*versteckt den scrollbar unten horizontal*/
+    overflow-y: scroll;
+    overflow-x: hidden;
    
 }
+
+
+
 
 /* Basis styles */
 *{
@@ -20,7 +26,7 @@
 
 html{
     
-    font-size: 62.5%;
+    font-size: 70%;
 }
 
 body{
@@ -29,14 +35,14 @@ body{
     font-size: var(--font-size-sm);
     color: var(--light-color-alt);
     background-color: var(--primary-background-color);
-    letter-spacing: 3px;
+    letter-spacing: 2px;
 }
 
 a{
     /* Box-hintergundfarbe beim menü*/
     background-color: #798b8f;
     border-radius: 1rem;
-    padding: 0.8rem;
+    padding: .9rem;
     color: inherit;
     text-decoration: none;
 }
@@ -45,10 +51,7 @@ ul{
     list-style: none;
 }
 
-img{
-    max-width: 100%;
-}
-
+/*icon*/
 input,
 button {
   font: inherit;
@@ -57,12 +60,12 @@ button {
   background-color: transparent;
 }
 
+/*macht icons im navbereich größer*/
 i{
     font-size: var(--font-size-md);
-    
 }
 
-/* wiederbenutzbare Klassen */
+/*beeinflusst navbar und post container breite*/
 .container{
     max-width: 160rem;
     margin: 0 auto;
@@ -70,96 +73,55 @@ i{
     
 }
 
-.place-items-center{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
 
+/*versteck login symbol beim verkleinern*/
 .screen-sm-hidden{
     display: none;
 }
+
+
+
+
 /* Header */
 .header{
-    background-color: var(--secondary-background-color);
-    position: fixed;
-    width: 100%;
+    /*   position: fixed;*/ 
     
 }
 
+/*  macht grad keinen unterschied mehr?? idk why
 .navbar{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding-block: 1.5rem;
+    justify-content:center;
+    padding-block: 2rem;
 }
+*/
 
-.logo{
+/*.logo{
     font-size: var(--font-size-md);
-    color: var(--light-color);
+    color: #eef3ec;
 }
-
-.menu{
-    position: absolute;
-    top: 8.5rem;
-    right: 1.5rem;
-    width: 23rem;
-    padding: 1.5rem;
-    /* hintergrundfarbe für minimenü*/
-    background-color:#132727;
-    transform: scale(0);
-    transition: opacity .25s ease-in;
-}
-
-.list{
-    display: flex;
-    align-items: center;
-    gap: var(--gap);
-}
-
-.menu > .list{
-    flex-direction: column;
-}
-
-.list-link.current{
-    color: var(--light-color);
-}
-
-.close-menu-icon{
-    display: none;
-}
-
+*/
 .btn{
     cursor: pointer;
 }
 
-.list-link:hover,
-.btn:hover,
-.btn:hover span{
-    color: var(--light-color);
-}
-
-.moon-icon,
-.light-theme .sun-icon{
-    display: none;
-}
 
 
 
 .light-theme .moon-icon{
     display: block;
 }
-/* Header JavaScript Styles */
-.header.activated{
-    box-shadow: 0 1px .5rem var(--transparent-light-color);
-}
 
+
+/*ist zuständig das der burgermenü erscheint*/
 .menu.activated{
     box-shadow: 1px 1px 1rem var(--transparent-light-color);
     opacity: 1;
     transform: scale(1);
 }
 
+/*verantwortlich das es vom burgersymbol zum x wird*/
 .menu-toggle-icon.activated .open-menu-icon{
     display: none;
 }
@@ -169,17 +131,27 @@ i{
 }
 
 
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: .8em;
+}
+  
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: #798b8f;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #CDD3C4;
+}
+
 
 
 @media screen and (min-width: 1024px) {
-    .menu{
-        position: static;
-        width: initial;
-        padding: initial;
-        background-color: transparent;
-        opacity: 1;
-        transform: scale(1);
-    }
+  
 
     .menu > .list{
         flex-direction: row;
@@ -195,21 +167,18 @@ i{
 
 }
 
+
 .Faden{
     position:absolute;
-    right: 1rem;
+    left: 70em;
     z-index: -1;
   
   }
 
+  
   /* Footer */
-.footer{
-    background-color: var(--secondary-background-color);
-}
 
-.footer-container{
-    gap: var(--gap);
-}
+
 
 .company-data{
     display: flex;
@@ -261,7 +230,7 @@ i{
    
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width:500px) {
 
     .posts .article{
         grid-template-columns: 20rem 1fr;
@@ -270,70 +239,6 @@ i{
 
     
 }
-
-
-@media screen and (min-width: 1024px) {
-   
-    .menu{
-        position: static;
-        width: initial;
-        padding: initial;
-        background-color: transparent;
-        opacity: 1;
-        transform: scale(1);
-        
-    }
-
-    .menu > .list{
-        flex-direction: row;
-    }
-
-    .screen-lg-hidden{
-        display: none;
-    }
-
-    .screen-sm-hidden{
-        display: block;
-    }
-
-    .sign-up-btn{
-        padding: 4px;
-    }
-   
-   
-
-   
-    .footer-container{
-        grid-template-columns: repeat(5, 1fr);
-    }
-
-    .company-data{
-        grid-column: span 4;
-    }
-
-    .company-description{
-        max-width: 85%;
-    }
-
-    .copyright-notice{
-        margin-top: auto;
-    }
-
-   
-}
-
-
-
-
-
-
-  
-
-
-
-
-
-
 
 
 

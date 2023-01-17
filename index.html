@@ -2,7 +2,7 @@
 <html lang="de-de">
   <head>
     <meta charset="UTF-8" />
-    <title>Produktuebersicht | Startseite</title>
+    <title>Startseite</title>
 
     <!-- icon für den Tab -->
     <link rel="icon" href="./Anhang/images/favicon.png" />
@@ -19,6 +19,7 @@
   <body>
     <!-- Navigationsbereich -->
     <header class="header" id="header">
+      
       <nav class="navbar container">
         <a href="./index.html" class="Logo">
           <h2 class="logo">Vesticum</h2>
@@ -27,7 +28,10 @@
         <div class="menu" id="menu">
           <ul class="list">
             <li class="list-item">
-              <a href="#" class="list-link current">Produktübersicht</a>
+              <a href="#" class="list-link current ">Startseite</a>
+            </li>
+            <li class="list-item">
+              <a href="./Produktübersicht.html" class="list-link ">Produktübersicht</a>
             </li>
             <li class="list-item">
               <a href="./Informationsbereich.html" class="list-link">Informationen</a>
@@ -42,11 +46,7 @@
           </ul>
         </div>
 
-        <div class="list list-right">
-          <button class="btn place-items-center" id="theme-toggle-btn">
-            <i class="ri-sun-line sun-icon"></i>
-            <i class="ri-moon-line moon-icon"></i>
-          </button>
+      
 
           <button class="btn place-items-center" id="search-icon">
           </button>
@@ -83,97 +83,42 @@
   <img src="./Icons/Faden.svg"  height="100%" >
   </div>
 
+<!-- AB HIER BODY-->
 
-    <!-- Blogpost  -->
-    <section class="posts section">
+<!-- home section starts  -->
 
-        <div class="container">
+<section class="home" id="home">
+  <div class="content">
+      <h3>Vesticum</h3>
+      <span> Beispiel unetrtext </span>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae laborum ut minus corrupti dolorum dolore assumenda iste voluptate dolorem pariatur.</p>
+  </div>
+</section>
 
-            <h2 class="title section-title" data-name="posts">Produkte</h2>
 
-            <div class="posts-grid-wrapper d-grid">
+<section class="about" id="about">
 
-                <a href="#" class="article d-grid">
-                    <div class="posts-article-image-wrapper">
-                        <img src="./Anhang/images/top.jpeg" alt="" class="article-image">
-                    </div>
+  <h1 class="heading"> <span> Über </span> uns </h1>
 
-                    <div class="article-data-container">
+  <div class="row">
 
-                        <div class="article-data">
-                            <span>23 Dez 2023</span>
-                            <span class="article-data-spacer"></span>
-                            <span>3 Min read</span>
-                        </div>
+      <div class="img-container">
+          <img src="/Anhang/images/bild2.jpeg" width="100%"></img>
+      </div>
 
-                        <h3 class="title article-title">Beispiel Artiekl Text</h3>
-                        <p class="article-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique a tempore sapiente corporis, eaque fuga placeat odit voluptatibus.</p>
+      <div class="content">
+          <h3>Text überschrift </h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem cumque sit nemo pariatur corporis perspiciatis aspernatur a ullam repudiandae autem asperiores quibusdam omnis commodi alias repellat illum, unde optio temporibus.</p>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium ea est commodi incidunt magni quia molestias perspiciatis, unde repudiandae quidem.</p>
+      </div>
+  </div>
 
-                    </div>
-                </a>
+</section>
 
-                <a href="#" class="article d-grid">
-                    <div class="posts-article-image-wrapper">
-                        <img src="./Anhang/images/favicon.png" alt="" class="article-image">
-                    </div>
+<!-- about section ends -->
 
-                    <div class="article-data-container">
 
-                        <div class="article-data">
-                            <span>23 Dez 2021</span>
-                            <span class="article-data-spacer"></span>
-                            <span>3 Min read</span>
-                        </div>
-
-                        <h3 class="title article-title">Beispiel Artiekl Text</h3>
-                        <p class="article-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique a tempore sapiente corporis, eaque fuga placeat odit voluptatibus.</p>
-
-                    </div>
-                </a>
-
-                <a href="#" class="article d-grid">
-                    <div class="posts-article-image-wrapper">
-                        <img src="./Anhang/images/favicon.png" alt="" class="article-image">
-                    </div>
-
-                    <div class="article-data-container">
-
-                        <div class="article-data">
-                            <span>23 Dec 2023</span>
-                            <span class="article-data-spacer"></span>
-                            <span>3 Min read</span>
-                        </div>
-
-                        <h3 class="title article-title">Beispiel Artiekl Text</h3>
-                        <p class="article-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique a tempore sapiente corporis, eaque fuga placeat odit voluptatibus.</p>
-
-                    </div>
-                </a>
-
-                <a href="#" class="article d-grid">
-                    <div class="posts-article-image-wrapper">
-                        <img src="./Anhang/images/top.jpeg" alt="" class="article-image">
-                    </div>
-
-                    <div class="article-data-container">
-
-                        <div class="article-data">
-                            <span>23 Dez 2023</span>
-                            <span class="article-data-spacer"></span>
-                            <span>3 Min read</span>
-                        </div>
-
-                        <h3 class="title article-title">Beispiel Artiekl Text</h3>
-                        <p class="article-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique a tempore sapiente corporis, eaque fuga placeat odit voluptatibus.</p>
-
-                    </div>
-                </a>
-
-              
-      
-
-    </section>
-
+<!--ende Body-->
 
     <!-- Footer -->
     <footer class="footer section">
@@ -181,7 +126,7 @@
         <div class="footer-container container d-grid">
             
             <div class="company-data">
-                <a href="./Startseite.html">
+                <a href="./index.html">
                     <h2 class="logo">Vesticum</h2>
                 </a>
                 <p class="company-description">kurze beschreibung der Firma muss noxh gemacht werden</p>

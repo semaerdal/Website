@@ -18,6 +18,10 @@
     display: grid;
 }
 
+
+
+
+
 /* Header */
 .header{
     background-color: var(--secondary-background-color);
@@ -70,8 +74,6 @@
     display: none;
 }
 
-
-
 .list-link:hover{
     color: var(--light-color);
 }
@@ -79,15 +81,11 @@
 
 
 
-/* Text produkt hinter kontainer  verstexkt es daamit  */
-.search-form-container{
-     position: fixed;
-}
 
 /*AB HIER BODY*/
 
 
-
+/*Home Anfang*/
 .home{
     display: flex;
     min-height:50rem;
@@ -97,19 +95,19 @@
     align-items: center;
     
 }
-
-/*Home */
 .home .content{
-    text-align: center;
-    
+    text-align: center; 
 }
 
-.home .content h3{
+
+/*Vesticum style*/
+.home .content h1{
     font-size: 9rem;
     color:#ffffff;
 
 }
-h3{
+/*Text-Shadow*/
+h1{
     text-shadow: 2px 2px 8px #ffffff;
 }
 
@@ -119,8 +117,72 @@ h3{
     padding:1rem;
     line-height: 2;/*Abstand oben und unten text*/
 }
+/*Home ende*/
 
 
+
+/*Wieso wir? bereich Anfang  Können das auch nach über uns machen*/
+.Why .row{
+    display: flex;
+    align-items: center;
+    gap:2rem;
+    flex-wrap: wrap;
+    padding:2rem 0;
+    padding-bottom: 3rem;
+}
+
+
+/*Bild über uns einstellung*/
+.Why .row .img-container{
+    flex:40rem;
+}
+
+.Why .row .content{
+    flex:1 1 40rem;
+}
+
+/*Text überscjrift*/
+.Why .row .content h3{
+    font-size: 3rem;
+    color:#333;
+}
+
+/*Text */
+.Why .row .content p{
+    font-size: 1.5rem;
+    color:#999;
+    padding:.5rem 0;
+    padding-top: 1rem;
+    line-height: 1.5;
+}
+
+section{
+    padding:2rem 9%;
+}
+
+/*Wieso Wir alles und "wir"*/
+.heading2{
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700px;
+    color:#ffffff;
+    padding:1rem;
+    margin:2rem 0;
+    background-color:rgb(0, 67, 18, 0.5);
+}
+/*"wir" text teil*/
+.heading2 span{
+    color:#023020;
+}
+
+/*Wieso wir bereich Ende*/
+
+
+
+
+
+
+/*Über uns bereich Anfang*/
 .about .row{
     display: flex;
     align-items: center;
@@ -130,9 +192,11 @@ h3{
     padding-bottom: 3rem;
 }
 
+
+
 /*Bild über uns einstellung*/
 .about .row .img-container{
-    flex:40rem;
+    flex:55rem;
 }
 
 .about .row .content{
@@ -141,9 +205,12 @@ h3{
 
 /*Text überscjrift*/
 .about .row .content h3{
+    text-align: center;
     font-size: 3rem;
+    font-weight: bolder;
     color:#333;
 }
+
 
 /*Text */
 .about .row .content p{
@@ -160,17 +227,21 @@ section{
 
 /*Über uns alles und "uns"*/
 .heading{
-    text-align: center;
-    font-size: 4rem;
-    color:#ffffff;
+    text-align:center;
+    font-size: 50px;
+    font-weight: 900px;
+    color:#000;
     padding:1rem;
     margin:2rem 0;
-    background-color:rgb(0, 67, 18, 0.5);
-}
+    }
 /*"Über" text teil*/
 .heading span{
-    color:#023020;
+    color:#28682c;
 }
+
+/*Über uns bereich Ende*/
+
+
 
 /*Kontakt Section start*/
 
@@ -184,19 +255,29 @@ section{
     margin:2rem 0;
     background-color:rgb(0, 67, 18, 0.5);
 }
+.heading2 span{
+    color:#023020;
+}
 
 
 /*Kontakt section box umrandung*/
 
 .contact_section_2 {
-    width: 50%;
-    margin: auto;
+    width: 100%;
+    margin: 0 auto;
     text-align: center;
     background-color: #ffffff;
-    box-shadow: 2px 2px 8px #2a2a2c;
-    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px #000;
+    border-radius: 15px;
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 80px;
+    position: relative;
+    z-index: 2;
+    
+}
+/*PAdding für grüne kontaktformular*/
+.container{
+    padding:2rem 9%;
 }
 /*Text box umrandung*/
 .email_text {
@@ -257,6 +338,17 @@ h1 {
 
 /*Kontakt Section end*/
 
+
+
+
+
+
+
+
+
+
+
+
 /* Footer */
 .footer{
     background-color: var(--secondary-background-color);
@@ -297,6 +389,12 @@ h1 {
 
 
 
+
+
+
+
+
+
 @media screen and (min-width: 700px) {
 
    
@@ -313,8 +411,14 @@ h1 {
         order: 0;
     }
 
-   
+    .contact_section{
+        align-items: center;
+
 }
+}
+
+ 
+
 
 @media screen and (min-width: 768px) {
 
@@ -325,6 +429,8 @@ h1 {
 
     
 }
+
+
 
 
 @media screen and (min-width: 1024px) {

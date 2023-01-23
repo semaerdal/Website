@@ -1,23 +1,4 @@
 
-:root{
-    --gap: 2rem;
-    --margin-sm: 2rem;
-    --margin-md: 3rem;
-    --item-min-height-sm: 20rem;
-    --item-min-height-md: 30rem;
-}
-
-
-
-/* macht den blog container unter navbar*/
-.section:not(.featured-articles){
-    padding-block: 5rem;
-}
-/*passt alles zum grid*/
-.d-grid{
-    display: grid;
-}
-
 /* Header */
 .header{
     background-color: var(--secondary-background-color);
@@ -70,8 +51,6 @@
     display: none;
 }
 
-
-
 .list-link:hover{
     color: var(--light-color);
 }
@@ -79,189 +58,268 @@
 
 
 
-/* Text produkt hinter kontainer  verstexkt es daamit  */
-.search-form-container{
-     position: fixed;
+/*AB HIER BODY*/
+body{
+    background-color: var(--background-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    box-sizing: border-box;
+}
+
+.bg-box{
+    background-color: #798b8f;
+    height:max-content;
+    width: 75%;
+    padding: 10rem;
+    align-self: center;
+
 }
 
 
-
-
-
-
-
-
-/*!!!!!!!!!!!!!!!! Größe anpassen container muss noch gemacht werden:,D!!!!!!!!!!!!!!!!!!!!!!!*/
-.article{
-    position: relative;
-    min-height: var(--item-min-height-md);
+h1{
+    text-align: center;
+    font-size: 1.5em;
+    color: #000; 
+    padding:1.5rem;
+    margin: 1.5rem;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    background-color: rgb(242, 244, 233);
 }
 
-/*bild passt sich dem container an*/
-.article-image{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform .25s;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
- 
+h3{
+    text-align: center;
+    background-color: #798b8f; 
+    padding:1.5rem;
+    margin: 1.5rem;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    font-size: 2em;
+    color:#ffffff;
+}
+
+h4{
+    display: flex;
+    padding: 1.2rem;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color:#ffffff;
 }
 
 
-.article-data-container{
-    width: 100%;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    padding: 2rem 1.5rem;
-    background-color: var(--transparent-dark-color);
-    z-index: 10;
-    transition: background-color .5s;
+.blog ,.content{
+    background-color: var(--secondary-background-color);
+    border-radius: 1.5rem;
+    margin: 1.5rem;
+
+}
+/*abstand text zum bild*/
+.blog-header{
+    overflow:hidden;
+    padding: 1rem;
+    margin-left: 2em;
 }
 
 /* schrift bleibt hell wenn man mit der masu rüber geht */
-.article:hover .article-data-container{
+.blog:hover .blog-header{
     background-color: var(--hover-light-color);
     color: var(--hover-dark-color);
 }
 
-.article:hover .article-data-spacer{
+.blog:hover .blog-header{
     background-color: var(--hover-dark-color);
 }
 
-.article:hover .article-title{
-    color: var(--hover-dark-color);
+/*bild passt sich dem container an*/
+.blog-image{
+    margin: 5px;
+    float: left;
+    width: 180px;
+    height: fit-content;
+    padding: auto;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
-/* 3mind read zentrerung*/
-.article-data{
+/* icon benutzer */
+.blog-header img{
+    float: right;
+    display: -moz-inline-stack;
+    
+}
+
+/* h2 "Artikelname" einstellen*/
+.blog-header h2{
+    background-color: #cdd4c5;
+    padding: .8rem;
+    margin: 1.5rem;
+    width: 43rem;
+    border-radius: 1.2rem;
+}
+
+
+/*Button Standort*/
+.Standort {
+    float:left;
+    margin-right:5px;
+    line-height: 2.5;
+    padding: 0 90px;
+    margin: 2.5rem;
+    font-size: 1.3rem;
+    text-align: center;
+    color: #fff;
+    border-radius: 1.2rem;
+    background-color:#cdd4c5;
+   }
+
+.Standort:hover {
+    background-color:#000000;
+}
+
+.Standort:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6), inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+
+
+/*Button Message*/
+.msg {
+    display: inline-block;
     display: flex;
-    align-items: center;
-    gap: var(--gap);
-    font-size: var(--font-size-xsm);
-    margin-bottom: 1rem;
+    line-height: 2.5;
+    padding: 0 90px;
+    margin: 2.5rem;
+    font-size: 1.3rem;
+    text-align: center;
+    color: #fff;
+    border-radius: 1.2rem;
+    background-color:#cdd4c5;
+   }
+
+.msg:hover {
+    background-color:#000000;
 }
 
-/*abstand vom titel zum text und bild*/
-.article-data-spacer{
-    display: flex;
-    align-items: center;
-    gap: var(--gap);
-    font-size: var(--font-size-xsm);
-    margin-bottom: 2rem;
-}
-
-
-
-
-/* posts */
-
-.posts-grid-wrapper{
-    gap: var(--gap);
-}
-
-.posts-article-image-wrapper,
-.posts .article{
-    min-height: var(--item-min-height-sm);
-}
-
-.posts .article{
-    background-color: var(--secondary-background-color);
-}
-
-.posts-article-image-wrapper{
-    position: relative;
-}
-
-.posts-grid-wrapper .article-data-container{
-    position:inherit;
-   
-}
-
-.posts-grid-wrapper .article-title{
-    margin-bottom: var(--margin-sm);
+.msg:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6), inset 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
 
 
 
-
-
-.Faden{
-
-    top: -1px;
-    height: 80em;
-    margin-right: -16rem;
-   
-}
 
 /* Footer */
-.footer{
-    background-color: var(--secondary-background-color);
+footer{
+    margin-top: auto;/*damit bleibt der footer unten*/
+    inset: auto 0 0 0;
 }
+
+
 
 .footer-container{
-    gap: var(--gap);
+	background: var(--secondary-background-color);
+	width: 100%;
+	text-align: left;
+	font: bold;
+	padding: 2rem 2rem;
 }
 
-.company-data{
-    display: flex;
-    flex-direction: column;
-    order: 1;
+.footer-container .footer-left,
+.footer-container .footer-center,
+.footer-container .footer-right{
+	display: inline-block;
+	vertical-align: top;
 }
 
-.company-description{
-    margin-block: var(--margin-sm);
-    max-width: 75%;
+/* Footer links */
+
+.footer-container .footer-left{
+	width: 40%;
+}
+
+/* Vesticum */
+
+.footer-container h4{
+	color:  #ffffff;
+    font-size: 4rem;
+}
+
+/* Footer links */
+
+.footer-container .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-container .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+    padding: 1rem;
+    margin: .8rem;
+}
+
+/* Footer Center */
+
+.footer-container .footer-center{
+	width: 35%;
+}
+
+.footer-container .footer-center p{
+	display: flex;
+	color: #ffffff;
+    font-size: 1.5rem;
+	vertical-align: middle;
+	margin:1rem;
+}
+
+.footer-container .footer-center p span{
+	font-weight: bold;
+	font-size:2rem;
+	line-height:2;
+}
+
+/* Footer Right */
+
+.footer-container .footer-right{
+	width: 20%;
+}
+
+.footer-container .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 1.5rem;
+    margin: 1rem;
+}
+
+/*überschrift üver das unternehmen*/
+.footer-container .footer-company-about span{
+	display: flex;
+	color:  #ffffff;
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin-bottom: 2rem;
 }
 
 
-.copyright-notice{
-    opacity: .8;
-}
+@media (max-width: 880px) {
 
-.footer-list{
-    flex-direction: column;
-    align-items:flex-start;
-}
-
-.footer-title{
-    color: aliceblue;
-    font-size: 1.5em;
-    text-transform: uppercase;
-    margin-bottom: var(--margin-sm);
-}
-
-
-
-
-@media screen and (min-width: 700px) {
-
-   
-
-    .form-container-inner{
-        align-items:stretch;
-    }
-
-    .footer-container{
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .company-data{
-        order: 0;
-    }
-
-   
-}
-
-@media screen and (min-width: 768px) {
-
-    .posts .article{
-        grid-template-columns: 20rem 1fr;
+	.footer-container .footer-left,
+	.footer-container .footer-center,
+	.footer-container .footer-right{
+		display: inline-block;
+		width: 100%;
+		text-align: center;
         
-    }
+	}
 
-    
+	.footer-container .footer-center i{
+		margin-left: 0;
+	}
+
 }
 
 
@@ -293,32 +351,7 @@
         padding: 4px;
     }
    
-   
-
-   
-    .footer-container{
-        grid-template-columns: repeat(5, 1fr);
-    }
-
-    .company-data{
-        grid-column: span 4;
-    }
-
-    .company-description{
-        max-width: 85%;
-    }
-
-    .copyright-notice{
-        margin-top: auto;
-    }
-
-   
 }
-
-
-
-
-
 
   
 

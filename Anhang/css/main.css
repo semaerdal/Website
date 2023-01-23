@@ -8,6 +8,7 @@
     --font-size-sm: 1.6rem;
     --font-size-md: 2.4rem;
     --gap: 5rem;
+    --background-color:#f2f4e9;
     /*versteckt den scrollbar unten horizontal*/
     overflow-y: scroll;
     overflow-x: hidden;
@@ -176,37 +177,118 @@ i{
   }
 
   
-  /* Footer */
 
-
-
-.company-data{
-    display: flex;
-    flex-direction: column;
-    order: 1;
-}
-
-.company-description{
-    margin-block: var(--margin-sm);
-    max-width: 75%;
+/* Footer */
+footer{
+    margin-top: auto;/*damit bleibt der footer unten*/
 }
 
 
-.copyright-notice{
-    opacity: .8;
+
+.footer-container{
+	background: var(--secondary-background-color);
+	width: 100%;
+	text-align: left;
+	font: bold;
+	padding: 2rem 2rem;
 }
 
-.footer-list{
-    flex-direction: column;
-    align-items:flex-start;
+.footer-container .footer-left,
+.footer-container .footer-center,
+.footer-container .footer-right{
+	display: inline-block;
+	vertical-align: top;
 }
 
-.footer-title{
-    color: aliceblue;
-    font-size: 1.5em;
-    text-transform: uppercase;
-    margin-bottom: var(--margin-sm);
+/* Footer links */
+
+.footer-container .footer-left{
+	width: 40%;
 }
+
+/* Vesticum */
+
+.footer-container h4{
+	color:  #ffffff;
+    font-size: 4rem;
+}
+
+/* Footer links */
+
+.footer-container .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-container .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+    padding: 1rem;
+    margin: .8rem;
+}
+
+/* Footer Center */
+
+.footer-container .footer-center{
+	width: 35%;
+}
+
+.footer-container .footer-center p{
+	display: flex;
+	color: #ffffff;
+    font-size: 1.5rem;
+	vertical-align: middle;
+	margin:1rem;
+}
+
+.footer-container .footer-center p span{
+	font-weight: bold;
+	font-size:2rem;
+	line-height:2;
+}
+
+/* Footer Right */
+
+.footer-container .footer-right{
+	width: 20%;
+}
+
+.footer-container .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 1.5rem;
+    margin: 1rem;
+}
+
+/*überschrift üver das unternehmen*/
+.footer-container .footer-company-about span{
+	display: flex;
+	color:  #ffffff;
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin-bottom: 2rem;
+}
+
+
+@media (max-width: 880px) {
+
+	.footer-container .footer-left,
+	.footer-container .footer-center,
+	.footer-container .footer-right{
+		display: inline-block;
+		width: 100%;
+		text-align: center;
+        
+	}
+
+	.footer-container .footer-center i{
+		margin-left: 0;
+	}
+
+}
+
 
 
 
@@ -215,17 +297,7 @@ i{
 
    
 
-    .form-container-inner{
-        align-items:stretch;
-    }
 
-    .footer-container{
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .company-data{
-        order: 0;
-    }
 
    
 }

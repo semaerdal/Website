@@ -57,26 +57,31 @@
 
 /*SIDEMENÜ*/
 .sidebar{
-height:100%;
-width:200px;
-background-color:#132727;
 position:fixed;
-overflow:auto
+background-color:#cdd4c5;
+overflow:hidden;
+float: left;
+margin-bottom: 200px;
+width: 10em;
+height: 350px;
+padding: 10px 5px;
+text-align: center;
+background-color: #cdd4c5;
 }
 
 .sidebar a {
-  color: #cdd4c5;  
-  font-size: 2rem;                                                    /* geht das nicht*/
-  font-family:Verdana, Geneva, sans-serif;
+  color: #132727;  
   padding-top: 9rem;
   text-decoration: none;
+  font-size: 2.5rem;
 
   
 }
-
 .sidebar a:hover {
-  color: #0000;
+  color: #ffffff;
 }
+
+
 .Liste{
   border:#000;
   display:inline-block;
@@ -107,7 +112,7 @@ body{
 .bg-box{
   background-color: #798b8f;
   height:max-content;
-  width: 75%;
+  width:60%;
   padding: 10rem;
   align-self: center;
 
@@ -196,52 +201,31 @@ h4{
   border-radius: 1.2rem;
 }
 
-
-/*Button Standort*/
-.Standort {
+.cart, button{
   float:left;
   margin-right:5px;
   line-height: 2.5;
   padding: 0 90px;
   margin: 2.5rem;
-  font-size: 1.3rem;
+  font-size: 17px;
   text-align: center;
   color: #fff;
   border-radius: 1.2rem;
   background-color:#cdd4c5;
- }
+}
 
-.Standort:hover {
+.cart:hover {
   background-color:#000000;
 }
 
-.Standort:active {
+.cart:active {
   box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6), inset 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
 
-
-
-/*Button Message*/
-.msg {
-  display: inline-block;
-  display: flex;
-  line-height: 2.5;
-  padding: 0 90px;
-  margin: 2.5rem;
-  font-size: 1.3rem;
-  text-align: center;
-  color: #fff;
-  border-radius: 1.2rem;
-  background-color:#cdd4c5;
- }
-
-.msg:hover {
-  background-color:#000000;
+.fa{
+  font-size: 29px;
 }
 
-.msg:active {
-  box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6), inset 2px 2px 3px rgba(0, 0, 0, 0.6);
-}
 
 
 

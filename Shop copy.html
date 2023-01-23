@@ -2,7 +2,7 @@
 <html lang="de-de">
   <head>
     <meta charset="UTF-8" />
-    <title>Produktübersicht</title>
+    <title>Shop</title>
 
     <!-- icon für den Tab -->
     <link rel="icon" href="./Anhang/images/favicon.png" />
@@ -14,9 +14,78 @@
 
     <!--stylesheets -->
     <link rel="stylesheet" href="./Anhang/css/main.css" />
-    <link rel="stylesheet" href="./Anhang/css/Produktübersicht.css" />
+    <link rel="stylesheet" href="./Anhang/css/shop copy.css" />
+
+
+            <!-- E-Book  Bild tauschen -->
+            <script type="text/javascript">
+
+              function tausch(){
+            //  document.getElementById('meinBild').setAttribute("src", "Bilder\ARGT3506.jpg " );
+            var hund = document.getElementsByName('meinBild')[0];
+
+            if(hund.src == "file:///C:/Users/JMelc/Bilder/E-Book1.jpg"){
+              hund.src = "file:///C:/Users/JMelc/Bilder/E-Book1.jpg";
+            }
+            else {
+              hund.src ="file:///C:/Users/JMelc/Bilder/E.jpg";
+            }
+
+              }
+              </script>
+
+
+  <script type="text/javascript">
+    //funktion div einbleinden und ausblenden
+  var hidden = false;
+  var hidden2 = false;
+    function hideOrShow(name)
+    {
+      if(name == "button1"){
+        hidden = !hidden;
+      }
+      if(name == "button2"){
+        hidden2 = !hidden2;
+      }
+      if((hidden&&!hidden2)||(hidden2&&!hidden))
+      {
+        document.getElementById("zwei").style.display = "none";
+        document.getElementById("zwei1").style.display = "none";
+        document.getElementById("eins").style.display = "block";
+        document.getElementById("eins1").style.display = "block";
+      } else if (hidden&&hidden2) {
+        document.getElementById("eins").style.display = "none";
+        document.getElementById("eins1").style.display = "none";
+        document.getElementById("zwei").style.display = "block";
+        document.getElementById("zwei1").style.display = "block";
+      }
+      else
+      {
+        document.getElementById("eins").style.display = "none";
+        document.getElementById("eins1").style.display = "none";
+/* schauen
+        <?php
+			if( isset($_GET['zahl']) )
+			{
+				$zaehler = $_GET['zahl'] +1;
+			}
+			else
+			{
+				$zaehler = 1;
+			}
+			echo '<a href="?zahl='.$zaehler.'">Klick mich</a>';
+			echo "<br />";
+			echo "Die Zahl lautet: ".$zaehler;
+		?>	*/
+  }
+    }
+
+  </script>
+  </head>
+
 
   <body>
+    
     <!-- Navigationsbereich -->
     <header class="header" id="header">
       <nav class="navbar container">
@@ -71,28 +140,16 @@
       </button>
     </div>
 
-    
 <!--SIDEMENÜ-->
-<div class="sidebar bar-block collapse card animate-left" style="width:200px;" id="mySidebar">
-  <a href="#" class="Liste">Kategorie</a>
-   <a href="#" class="Liste">Kategorie</a>
-   <a href="#" class="Liste">Kategorie</a>
-   <a href="#" class="Liste">Kategorie</a>
-
- </div>
-
-    <!-- ENDE NAVIBEREICH -->
-
-
-    <!--Faden an der Seite-->
-  </div>
-  <div class="Faden">
-  <img src="./Icons/Faden.svg"  height="100%" >
-  </div>
+    <div class="sidebar bar-block collapse card animate-left" style="width:200px;" id="mySidebar">
+     <a href="#Buch1" class="Liste">E-Book </a>
+      <a href="#Buch2" class="Liste">Buch</a>
+    </div>
 
 
     
     <!-- ENDE NAVIBEREICH -->
+
 
 
 
@@ -106,6 +163,7 @@
     <h1>Kategorie-Überschrift</h1>
 
     <div class="blog">
+      
 
       <div class="blog-image">
         <img src="./Anhang/images/top.jpeg" class="blog-image" >
@@ -127,10 +185,6 @@
       </div>
     </div>
   </div>
-
-    
-    
-        
 
 
 
@@ -230,7 +284,6 @@
 
 
 
-
     <!-- Footer -->
 <footer class="footer-container">
 
@@ -286,6 +339,16 @@
     
     <!-- script link -->
     <script src="./Anhang/js/main.js"></script>
+    <script>
+      function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+      }
+      
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+      }
+      </script>
+        
 
   </body>
 </html>

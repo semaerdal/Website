@@ -149,7 +149,10 @@ h4{
   color:#ffffff;
 }
 
-
+.blog{
+  width: 600px;
+  
+}
 .blog ,.content{
   background-color: var(--secondary-background-color);
   border-radius: 1.5rem;
@@ -159,8 +162,8 @@ h4{
 /*abstand text zum bild*/
 .blog-header{
   overflow:hidden;
-  padding: 1rem;
-  margin-left: 2em;
+  padding: 1em;
+
 }
 
 /* schrift bleibt hell wenn man mit der masu rüber geht */
@@ -178,16 +181,16 @@ h4{
   margin: 5px;
   float: left;
   width: 180px;
-  height: fit-content;
+  height:min-content;
   padding: auto;
   border-radius: 1.5rem;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+  
 }
 
 /* icon benutzer */
 .blog-header img{
   float: right;
+  margin: 1rem;
   display: -moz-inline-stack;
   
 }
@@ -201,29 +204,25 @@ h4{
   border-radius: 1.2rem;
 }
 
+/*Warenkorb*/
 .cart, button{
-  float:left;
-  margin-right:5px;
+  float:right;
   line-height: 2.5;
-  padding: 0 90px;
-  margin: 2.5rem;
-  font-size: 17px;
+  padding: .5rem;
+  margin: 1.5rem;
+  font-size: 15px;
   text-align: center;
-  color: #fff;
+  color: #000000;
   border-radius: 1.2rem;
   background-color:#cdd4c5;
 }
 
 .cart:hover {
   background-color:#000000;
+  color: #92999f;
 }
-
-.cart:active {
-  box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6), inset 2px 2px 3px rgba(0, 0, 0, 0.6);
-}
-
 .fa{
-  font-size: 29px;
+  font-size: 23px;
 }
 
 

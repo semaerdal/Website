@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="de-de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>warenkorb</title>
+
+
+    <!-- icon für den Tab -->
+    <link rel="icon" href="./Anhang/images/favicon.png" />
+
+    <!-- andere icons im Navigationsbereich -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"/>
+
+
+      <link rel="stylesheet" href="/Anhang/css/warenkorb.css" media="screen" title="no title" charset="utf-8">
+      <script src="https://code.jquery.com/jquery-2.2.4.js" charset="utf-8"></script>
+      
+    <!--stylesheets -->
+    <link rel="stylesheet" href="./Anhang/css/main.css" />
+    <link rel="stylesheet" href="/Anhang/css/warenkorb.css" media="screen" title="no title" charset="utf-8">
+   
+
+    <!-- Navigationsbereich -->
+    <header class="header" id="header">
+      <nav class="navbar container">
+        <a href="./index.html" class="Logo">
+          <h2 class="logo">Vesticum</h2>
+        </a>
+
+        <div class="menu" id="menu">
+          <ul class="list">
+            <li class="list-item">
+              <a href="./index.html" class="list-link ">Startseite</a>
+            </li>
+            <li class="list-item">
+              <a href="#" class="list-link">Produktübersicht</a>
+            </li>
+            <li class="list-item">
+              <a href="./Informationsbereich.html" class="list-link">Informationen</a>
+            </li>
+            <li class="list-item">
+              <a href="./Shop.html" class="list-link current">Shop</a>
+            </li>
+
+            <li class="list-item screen-lg-hidden">
+              <a href="./Login.html" class="list-link">Login</a>
+            </li>
+          </ul>
+        </div>
+
+       
+          <a href="./Login.html" class="list-link screen-sm-hidden">Login</a>
+        </div>
+      </nav>
+    </header>
+
+ 
+  
+
+    <!-- ENDE NAVIBEREICH -->
+
+    <body>
+      <div class="shopping-cart">
+        <!-- Title -->
+        <div class="title">
+          warenkorb
+        </div>
+  
+        <!-- Product #1 -->
+        <div class="item">
+          <div class="buttons">
+            <span class="like-btn"></span>
+          </div>
+  
+          <div class="image">
+            <img src="/icons/item-1.png" alt="" />
+          </div>
+  
+          <div class="description">
+            <span>E-Book</span>
+            <span>text </span>
+            <span>text</span>
+          </div>
+  
+          <div class="quantity">
+            <button class="plus-btn" type="button" name="button">
+              <img src="/icons/plus.svg" alt="" />
+            </button>
+            <input type="text" name="name" value="1">
+            <button class="minus-btn" type="button" name="button">
+              <img src="/icons/minus.svg" alt="" />
+            </button>
+          </div>
+  
+          <div class="total-price">5€</div>
+        </div>
+  
+        <!-- Product #2 -->
+        <div class="item">
+          <div class="buttons">
+            <span class="like-btn"></span>
+          </div>
+  
+          <div class="image">
+            <img src="/icons/item-2.png" alt=""/>
+          </div>
+  
+          <div class="description">
+            <span>Buch</span>
+            <span> Text</span>
+            <span>Text</span>
+          </div>
+  
+          <div class="quantity">
+            <button class="plus-btn" type="button" name="button">
+              <img src="/icons/plus.svg" alt="" />
+            </button>
+            <input type="text" name="name" value="1">
+            <button class="minus-btn" type="button" name="button">
+              <img src="/icons/minus.svg" alt="" />
+            </button>
+          </div>
+  
+          <div class="total-price">10€</div>
+      </div>
+    </div>
+  </div>
+
+
+  
+
+    
+    <!-- Footer -->
+<footer class="footer-container">
+
+			<div class="footer-left">
+
+				<h4><span>Vesticum</span></h4>
+
+				<p class="footer-links">
+					<a href="./index.html">Startseite</a>
+					
+					<a href="./Produktübersicht.html">Produkte</a>
+				
+					<a href="./Informationsbereich.html">Informationen</a>
+				
+					<a href="./Shop.html">Shop</a>
+					
+					<a href="./Login.html">Login</a>
+				</p>
+      
+      </div>
+
+			<div class="footer-center">
+
+				<div>
+					<i class="mitglieder"></i>
+					<p> <span>Mitglieder</span></p>
+				</div>
+
+				<div>
+					<i class="fa-phone"></i>
+					<p>Sema Erdal</p>
+				</div>
+
+				<div>
+					<i class="fa-mail"></i>
+					<p>Jenni</a></p>
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+
+				<p class="footer-company-about">
+					<span>Über das Unternehmen</span>
+					Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+				</p>
+
+			</div>
+      
+
+		</footer>
+
+
+
+    <script type="text/javascript">
+      $('.minus-btn').on('click', function(e) {
+    		e.preventDefault();
+    		var $this = $(this);
+    		var $input = $this.closest('div').find('input');
+    		var value = parseInt($input.val());
+
+    		if (value > 1) {
+    			value = value - 1;
+    		} else {
+    			value = 0;
+    		}
+
+        $input.val(value);
+
+    	});
+
+    	$('.plus-btn').on('click', function(e) {
+    		e.preventDefault();
+    		var $this = $(this);
+    		var $input = $this.closest('div').find('input');
+    		var value = parseInt($input.val());
+
+    		if (value < 100) {
+      		value = value + 1;
+    		} else {
+    			value =100;
+    		}
+
+    		$input.val(value);
+    	});
+
+      $('.like-btn').on('click', function() {
+        $(this).toggleClass('is-active');
+      });
+    </script>
+
+
+  </body>
+</html>

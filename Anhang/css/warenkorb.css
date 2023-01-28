@@ -1,0 +1,428 @@
+
+* {
+  box-sizing: border-box;
+}
+
+:root{
+  --green:#023020;
+  --gap: 2rem;
+  --margin-sm: 2rem;
+  --margin-md: 3rem;
+  --item-min-height-sm: 20rem;
+  --item-min-height-md: 30rem;
+}
+
+
+
+/* macht den blog container unter navbar*/
+.section:not(.featured-articles){
+  padding-block: 5rem;
+}
+/*passt alles zum grid*/
+.d-grid{
+  display: grid;
+}
+
+
+body{
+  background-color: var(--background-color);
+}
+
+
+/* Header */
+.header{
+  background-color: var(--secondary-background-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 1.5rem;
+}
+
+.logo{
+  font-size: var(--font-size-md);
+  color: var(--light-color);
+}
+
+.menu{
+  position: absolute;
+  top: 8.5rem;
+  right: 1.5rem;
+  width: 23rem;
+  padding: 1.5rem;
+  background-color:var(--secondary-background-color);
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity .25s ease-in;
+}
+
+.list{
+  display: flex;
+  align-items: center;
+  gap: var(--gap);
+}
+
+.menu > .list{
+  flex-direction: column;
+}
+
+.list-link.current{
+  color: var(--light-color);
+}
+
+.close-menu-icon{
+  display: none;
+}
+
+.list-link:hover{
+  color: var(--light-color);
+}
+
+
+
+
+
+/*AB HIER BODY*/
+
+
+
+.shopping-cart {
+  width: 750px;
+  height: 423px;
+  margin: 80px auto;
+  background: #FFFFFF;
+  box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
+  border-radius: 6px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  height: 60px;
+  border-bottom: 1px solid #E1E8EE;
+  padding: 20px 30px;
+  color: #5E6977;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.item {
+  padding: 20px 30px;
+  height: 120px;
+  display: flex;
+}
+
+.item:nth-child(3) {
+  border-top:  1px solid #E1E8EE;
+  border-bottom:  1px solid #E1E8EE;
+}
+
+/* Buttons -  Delete and Like */
+.buttons {
+  position: relative;
+  padding-top: 30px;
+  margin-right: 60px;
+}
+
+.like-btn {
+  position: absolute;
+  top: 9px;
+  left: 15px;
+  display: inline-block;
+  background: url("/Icons/twitter-heart.png");
+  width: 60px;
+  height: 60px;
+  background-size: 2900%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.is-active {
+  animation-name: animate;
+  animation-duration: .8s;
+  animation-iteration-count: 1;
+  animation-timing-function: steps(28);
+  animation-fill-mode: forwards;
+}
+
+@keyframes animate {
+  0%   { background-position: left;  }
+  50%  { background-position: right; }
+  100% { background-position: right; }
+}
+
+/* Product Image */
+.image {
+  margin-right: 50px;
+}
+
+/* Product Description */
+.description {
+  padding-top: 10px;
+  margin-right: 60px;
+  width: 115px;
+}
+
+.description span {
+  display: block;
+  font-size: 14px;
+  color: #43484D;
+  font-weight: 400;
+}
+
+.description span:first-child {
+  margin-bottom: 5px;
+}
+.description span:last-child {
+  font-weight: 300;
+  margin-top: 8px;
+  color: #86939E;
+}
+
+/* Product Quantity */
+.quantity {
+  padding-top: 20px;
+  margin-right: 60px;
+}
+.quantity input {
+  -webkit-appearance: none;
+  border: none;
+  text-align: center;
+  width: 32px;
+  font-size: 16px;
+  color: #43484D;
+  font-weight: 300;
+}
+
+button[class*=btn] {
+  width: 30px;
+  height: 30px;
+  background-color: #E1E8EE;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+.minus-btn img {
+  margin-bottom: 3px;
+}
+.plus-btn img {
+  margin-top: 2px;
+}
+button:focus,
+input:focus {
+  outline:0;
+}
+
+/* Total Price */
+.total-price {
+  width: 83px;
+  padding-top: 27px;
+  text-align: center;
+  font-size: 16px;
+  color: #43484D;
+  font-weight: 300;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .shopping-cart {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+  .item {
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .image img {
+    width: 50%;
+  }
+  .image,
+  .quantity,
+  .description {
+    width: 100%;
+    text-align: center;
+    margin: 6px 0;
+  }
+  .buttons {
+    margin-right: 20px;
+  }
+}
+
+
+
+
+/* Footer */
+footer{
+    margin-top: auto;/*damit bleibt der footer unten*/
+}
+
+
+
+.footer-container{
+	background: var(--secondary-background-color);
+	width: 100%;
+	text-align: left;
+	font: bold;
+	padding: 2rem 2rem;
+}
+
+.footer-container .footer-left,
+.footer-container .footer-center,
+.footer-container .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer links */
+
+.footer-container .footer-left{
+	width: 40%;
+}
+
+/* Vesticum */
+
+.footer-container h4{
+	color:  #ffffff;
+    font-size: 4rem;
+}
+
+/* Footer links */
+
+.footer-container .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-container .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+    padding: 1rem;
+    margin: .8rem;
+}
+
+/* Footer Center */
+
+.footer-container .footer-center{
+	width: 35%;
+}
+
+.footer-container .footer-center p{
+	display: flex;
+	color: #ffffff;
+    font-size: 1.5rem;
+	vertical-align: middle;
+	margin:1rem;
+}
+
+.footer-container .footer-center p span{
+	font-weight: bold;
+	font-size:2rem;
+	line-height:2;
+}
+
+/* Footer Right */
+
+.footer-container .footer-right{
+	width: 20%;
+}
+
+.footer-container .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 1.5rem;
+    margin: 1rem;
+}
+
+/*überschrift üver das unternehmen*/
+.footer-container .footer-company-about span{
+	display: flex;
+	color:  #ffffff;
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin-bottom: 2rem;
+}
+
+
+@media (max-width: 880px) {
+
+	.footer-container .footer-left,
+	.footer-container .footer-center,
+	.footer-container .footer-right{
+		display: inline-block;
+		width: 100%;
+		text-align: center;
+        
+	}
+
+	.footer-container .footer-center i{
+		margin-left: 0;
+	}
+
+}
+
+
+
+
+
+
+
+
+@media screen and (min-width: 768px) {
+
+    .posts .article{
+        grid-template-columns: 20rem 1fr;
+        
+    }
+
+    
+}
+
+
+
+
+@media screen and (min-width: 1024px) {
+   
+    .menu{
+        position: static;
+        width: initial;
+        padding: initial;
+        background-color: transparent;
+        opacity: 1;
+        transform: scale(1);
+        
+    }
+
+    .menu > .list{
+        flex-direction: row;
+    }
+
+    .screen-lg-hidden{
+        display: none;
+    }
+
+    .screen-sm-hidden{
+        display: block;
+    }
+
+    .sign-up-btn{
+        padding: 4px;
+    }
+   
+   
+
+}
+
+  
+

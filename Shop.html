@@ -1,148 +1,143 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de-de">
   <head>
     <meta charset="UTF-8" />
     <title>Shop</title>
 
-
     <!-- icon für den Tab -->
+
     <link rel="icon" href="./Anhang/images/favicon.png" />
 
     <!-- andere icons im Navigationsbereich -->
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
       rel="stylesheet"/>
-
+  
     <!--stylesheets -->
-    <link rel="stylesheet" href="./Anhang/css/shop.css">
-    <link rel="stylesheet" href="./Anhang/css/main.css">
+    <link rel="stylesheet" href="./Anhang/css/main.css" />
+    <link rel="stylesheet" href="./Anhang/css/shop.css" />
 
 
-            <!-- E-Book  Bild tauschen -->
-    <script type="text/javascript">
-
-              function tausch(){
-            //  document.getElementById('meinBild').setAttribute("src", "Bilder\ARGT3506.jpg " );
-            var hund = document.getElementsByName('meinBild')[0];
-
-            if(hund.src == "file:///C:/Users/JMelc/Bilder/E-Book1.jpg"){
-              hund.src = "file:///C:/Users/JMelc/Bilder/E-Book1.jpg";
-            }
-            else {
-              hund.src ="file:///C:/Users/JMelc/Bilder/E.jpg";
-            }
-
-              }
-              </script>
-
-
-  <script type="text/javascript">
-    //funktion div einbleinden und ausblenden
-  var hidden = false;
-  var hidden2 = false;
-    function hideOrShow(name)
-    {
-      if(name == "button1"){
-        hidden = !hidden;
-      }
-      if(name == "button2"){
-        hidden2 = !hidden2;
-      }
-      if((hidden&&!hidden2)||(hidden2&&!hidden))
-      {
-        document.getElementById("zwei").style.display = "none";
-        document.getElementById("zwei1").style.display = "none";
-        document.getElementById("eins").style.display = "block";
-        document.getElementById("eins1").style.display = "block";
-      } else if (hidden&&hidden2) {
-        document.getElementById("eins").style.display = "none";
-        document.getElementById("eins1").style.display = "none";
-        document.getElementById("zwei").style.display = "block";
-        document.getElementById("zwei1").style.display = "block";
-      }
-      else
-      {
-        document.getElementById("eins").style.display = "none";
-        document.getElementById("eins1").style.display = "none";
-/* schauen
-        <?php
-			if( isset($_GET['zahl']) )
-			{
-				$zaehler = $_GET['zahl'] +1;
-			}
-			else
-			{
-				$zaehler = 1;
-			}
-			echo '<a href="?zahl='.$zaehler.'">Klick mich</a>';
-			echo "<br />";
-			echo "Die Zahl lautet: ".$zaehler;
-		?>	*/
-  }
-    }
-
-  </script>
-  </head>
 
   <body>
+    
+    <!-- Navigationsbereich -->
+    <header class="header" id="header">
+      <nav class="navbar container">
+        <a href="./index.html" class="Logo">
+          <h2 class="logo">Vesticum</h2>
+        </a>
+
+        <div class="menu" id="menu">
+          <ul class="list">
+            <li class="list-item">
+              <a href="./index.html" class="list-link ">Startseite</a>
+            </li>
+            <li class="list-item">
+              <a href="./Produktübersicht.html" class="list-link ">Produktübersicht</a>
+            </li>
+            <li class="list-item">
+              <a href="./Informationsbereich.html" class="list-link">Informationen</a>
+            </li>
+            <li class="list-item">
+              <a href="#" class="list-link current">Shop</a>
+            </li>
+
+            <li class="list-item screen-lg-hidden">
+              <a href="./Login.html" class="list-link">Login</a>
+            </li>
+          </ul>
+        </div>
+
+        <button
+          class="btn place-items-center screen-lg-hidden menu-toggle-icon"
+          id="menu-toggle-icon"
+        >
+        
+          <i class="ri-menu-3-line open-menu-icon"></i>
+          <i class="ri-close-line close-menu-icon"></i>
+        </button>
+
+        <a href="./Login.html" class="list-link screen-sm-hidden">Login</a>
+    </nav>
+  </header>
+
+    
+<!--SIDEMENÜ-->
+    <div class="sidebar">
+     <a href="#E-Book" class="Liste">E-Book </a>
+      <a href="#Buch" class="Liste">Buch</a>
+    </div>
 
 
- <Div class ="navbar-left">
-
-    <div class ="E-Book"  >
-      <a href="#Buch1" class="list"> E-Buch </a> </div>  <!-- hinspringen zum nächsten produkt -->
-    <div class ="Book" >
-      <a href="#Buch2" class="list" > Buch </a> </div>  <!-- hinspringen zum nächsten produkt -->
-
-
- </div>
-
- <div class="dunkleumrandung" >
-
-
-   <div class="Kategorie_name" > <h1> Bücher </h1>  </div>
-
-<div class = Kategorie id="Buch1">
-</div>
-<div class="container1"  >
-<div class="Kategorie_Ueberschrift"  >
-      <h2>  E-Buch </h2>
-</div>
-<div class="Warenkorbbild">
-<div class="eins" id="eins"> 1
-</div>
-<div class="zwei" id="zwei"> 2
-</div>
-
-<img src="Icons\Warenkorb.png" alt="Warenkorb Bild"  width="100%" height="auto" >
-</div>
+    
+    <!-- ENDE NAVIBEREICH -->
 
 
 
 
-  <div class= " Bild">
-    <img src="Icons\Zeichenfläche 1.png" alt="E-Book Bild" Name="E-Book" width="100%" height="auto" onclick="tausch(this)">
+
+<!-- Blogpost  -->
+
+<!-- erstes produkt-->
+
+<div class="bg-box">
+    <h1>SHOP</h1>
+
+    <div class="blog">
+      <div class="blog-image">
+        <img src="./Icons/Zeichenfläche 1.png" class="blog-image" >
+    </div>
+
+      <div class="blog-header">
+        <img src="/Icons/user.svg" alt="" width="50px">
+
+        <h3  id="E-Book">E-Book</h3> <!--mit dem id kann ich im sidebar es hier verlinken-->
+
+      <div class="content">
+        <p>In diesen Buch haben wir Informationen zusammengetragen die sich um Fast-Fashion und um Umweltschutzt handelt.
+          Das Buch ist Perfekt für Leute die Mehr über das Thema wissen möchten und beinhaltet Triks und Tipps.
+           Das hier ist eine E-Book ausgabe und ist beim kauf dirkt Erhältlich.</p>
+
+         
+          </div>
+
+           <button class="cart"type="button">Warenkorb <i class="fa fa-shopping-cart"></i>
+          </button>
+          
+        </div>
+         
+      </div>
+     
+      
+<!-- zweites produkt-->
+  <div class="blog">
+    <div class="blog-image">
+      <img src="./Icons/Zeichenfläche 1.png" class="blog-image" >
   </div>
 
+    <div class="blog-header">
+      <img src="/Icons/user.svg" alt="" width="50px">
 
+      <h3  id="Buch">Buch</h3>
 
+    <div class="content">
+      <p>In diesen Buch haben wir Informationen zusammengetragen die sich um Fast-Fashion und um Umweltschutzt handelt.
+        Das Buch ist Perfekt für Leute die Mehr über das Thema wissen möchten und beinhaltet Triks und Tipps.
+         Das hier ist eine E-Book ausgabe und ist beim kauf dirkt Erhältlich.</p>
 
+         
+        </div>
+  
+        <button class="cart"type="button">Warenkorb <i class="fa fa-shopping-cart"></i>
+        </button>
 
-
-  <div class="Beschreibung" >
-    <div  > <p> In diesen Buch haben wir Informationen zusammengetragen die sich um Fast-Fashion und um Umweltschutzt handelt.
-       Das Buch ist Perfekt für Leute die Mehr über das Thema wissen möchten und beinhaltet Triks und Tipps.
-        Das hier ist eine E-Book ausgabe und ist beim kauf dirkt Erhältlich.</p> </div>
-
+      </div>
+         
+    </div>
+         
   </div>
-  <div class="Warenkorb">
-    <button type="button" id="button1" onclick="hideOrShow(this.id);">Warenkorb</button>
-  </div>
-  <div class="Lieferstatus">
-    direkt Erhältlich
-  </div>
-
-
+         
 </div>
 
 
@@ -154,59 +149,53 @@
 
 
 
+    <!-- Footer -->
+<footer class="footer-container">
 
-<div class = Kategorie2 >
-</div>
-<div class="container2"  >
-<div class="Kategorie_Ueberschrift2"  >
-      <h2>  gebundenes Buch </h2>
-</div>
-<div class="Warenkorbbild2">
-  <div class="eins1" id="eins1"> 1
-  </div>
-  <div class="zwei1" id="zwei1"> 2
-  </div>
+			<div class="footer-left">
 
-<img src="Icons\Warenkorb.png" alt="Warenkorb Bild"  width="100%" height="auto" >
-</div>
+				<h4><span>Vesticum</span></h4>
 
+				<p class="footer-links">
+					<a href="./index.html">Startseite</a>
+					
+					<a href="./Produktübersicht.html">Produkte</a>
+				
+					<a href="./Informationsbereich.html">Informationen</a>
+				
+					<a href="./Shop.html">Shop</a>
+					
+					<a href="./Login.html">Login</a>
+				</p>
+      
+      </div>
 
+			<div class="footer-center">
 
+				<div>
+					<i class="mitglieder"></i>
+					<p> <span>Mitglieder</span></p>
+          <p>Sema Erdal</p>
+          <p>Jennifer </p>
+				</div>
+			</div>
 
-  <div class= " Bild2">
-    <img src="Icons\Zeichenfläche 1.png" alt="E-Book Bild" Name="E-Book" width="100%" height="auto" onclick="tausch(this)">
-  </div>
+			<div class="footer-right">
 
+				<p class="footer-company-about">
+					<span>Über das Unternehmen</span>
+					Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+				</p>
 
+			</div>
+      
 
+		</footer>
 
-
-
-  <div class="Beschreibung2" >
-    <div > <p>In diesen Buch haben wir Informationen zusammengetragen die sich um Fast-Fashion und um Umweltschutzt handelt.
-       Das Buch ist Perfekt für Leute die Mehr über das Thema wissen möchten und beinhaltet Triks und Tipps.
-        Das hier ist eine gebundene Ausgabe. Diese wird inerhalb 5-7 Werktagen verschickt.</p></div>
-
-  </div>
-  <div class="Warenkorb2">
-    <button type="button"  id="button2" onclick="hideOrShow(this.id);" >Warenkorb</button>
-  </div>
-  <div class="Lieferstatus2"  id="Buch2">
-    5-7 Werktage
-  </div>
-
-
-</div>
-
-
-
-</div>
-<div class="Faden">
-<img src="./Icons/Faden.svg"  height="1045px" >
-</div>
-
-   <!-- script link -->
-   <script src="./Anhang/js/main.js"></script>
+    
+    <!-- script link -->
+    <script src="./Anhang/js/main.js"></script>
+        
 
   </body>
 </html>

@@ -184,6 +184,67 @@ section{
 
 
 
+/*Gliederung bereich Anfang*/
+.gliederung .row{
+    display: flex;
+    align-items: center;
+    gap:2rem;
+    flex-wrap: wrap;
+    padding:2rem 0;
+    padding-bottom: 3rem;
+}
+
+
+
+/*Bild über uns einstellung*/
+.gliederung .row .img-container{
+    flex:40rem;
+}
+
+.gliederung .row .content{
+    flex:1 1 40rem;
+}
+
+/*Text überscjrift*/
+.gliederung .row .content h3{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bolder;
+    color:#333;
+}
+
+
+/*Text */
+.gliederung .row .content p{
+    font-size: 1.5rem;
+    color:#999;
+    padding:.5rem 0;
+    padding-top: 1rem;
+    line-height: 1.5;
+}
+
+section{
+    padding:2rem 9%;
+}
+
+/*Über uns alles und "uns"*/
+.heading{
+    text-align:center;
+    font-size: 50px;
+    font-weight: 900px;
+    color:#000;
+    padding:1rem;
+    margin:2rem 0;
+    }
+/*"Über" text teil*/
+.heading span{
+    color:#28682c;
+}
+
+/*Über uns bereich Ende*/
+
+
+
 /*Über uns bereich Anfang*/
 .about .row{
     display: flex;
@@ -241,8 +302,7 @@ section{
     color:#28682c;
 }
 
-/*Über uns bereich Ende*/
-
+/*Gliederung bereich Ende*/
 
 
 /*Kontakt Section start*/

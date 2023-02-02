@@ -60,38 +60,33 @@
 
 /*SIDEMENÜ*/
 .sidebar{
-    height:100%;
-    width:200px;
     background-color:#132727;
     position:fixed;
-    overflow:auto
+    overflow:hidden;
+    padding-bottom: 2rem;
+
+
+
     }
     
     .sidebar a {
-      color: #cdd4c5;  
-      font-size: 2rem;                                                    /* geht das nicht*/
+      color: #798b8f;                                                  
       font-family:Verdana, Geneva, sans-serif;
       padding-top: 9rem;
       text-decoration: none;
-    
       
     }
     
     .sidebar a:hover {
-      color: #0000;
+      color: #ffffff;
     }
     .Liste{
-      border:#000;
-      display:inline-block;
-      padding:10px 16px;
-      vertical-align:middle;
-      overflow:hidden;
+      display:flex;
+      padding:5px;
       text-decoration:none;
       color:inherit;
       background-color:inherit;
-      text-align:center;
       cursor:pointer;
-      white-space:nowrap
     }
     
     
@@ -108,7 +103,7 @@ body{
 .bg-box{
     background-color: #798b8f;
     height:max-content;
-    width: 60%;
+    width: 80%;
     padding: 10rem;
     align-self: center;
 
@@ -150,6 +145,10 @@ h4{
     background-color: var(--secondary-background-color);
     border-radius: 1.5rem;
     margin: 1.5rem;
+    font-size: 1.5rem;
+    padding:.5rem 0;
+    padding-top: 1rem;
+    line-height: 1.5;
 
 }
 /*abstand text zum bild*/
@@ -179,6 +178,7 @@ h4{
     border-radius: 1.5rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
+
 }
 
 /* icon benutzer */
@@ -200,10 +200,9 @@ h4{
 
 /*Button Standort*/
 .Standort {
-    float:left;
     margin-right:5px;
     line-height: 2.5;
-    padding: 0 90px;
+    padding: 0 60px;
     margin: 2.5rem;
     font-size: 1.3rem;
     text-align: center;
@@ -224,10 +223,8 @@ h4{
 
 /*Button Message*/
 .msg {
-    display: inline-block;
-    display: flex;
     line-height: 2.5;
-    padding: 0 90px;
+    padding: 0 60px;
     margin: 2.5rem;
     font-size: 1.3rem;
     text-align: center;
@@ -391,4 +388,29 @@ footer{
 }
 
   
+
+
+
+@media screen and (min-width: 768px) {
+
+    .blog .article{
+        grid-template-columns: 20rem 1fr;
+        
+    }
+
+    
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .blog-image, .blog-header img, .msg, .Standort{
+        display: none;
+    }
+    
+    
+}
+
+
+
 

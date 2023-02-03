@@ -109,9 +109,12 @@ body{
 
 }
 /*Text-Shadow*/
-.logo{
-    text-shadow: 2px 2px 8px #ffffff;
-    align-items: center;
+.logo img {
+    margin: auto;
+display: block;
+left: 50%;
+right: 50%;
+justify-content: center;
 }
 
 .home .content span{

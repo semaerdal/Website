@@ -1,28 +1,25 @@
 <!DOCTYPE html>
 <html lang="de-de">
   <head>
-    <meta charset="UTF-8" />
-    <title>Shop</title>
+    <meta charset="UTF-8">
+    <title>Startseite</title>
 
     <!-- icon für den Tab -->
-
-    <link rel="icon" href="./Anhang/images/favicon.png" />
+    <link rel="icon" href="./Anhang/images/favicon.png">
 
     <!-- andere icons im Navigationsbereich -->
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
       rel="stylesheet"/>
-  
+
     <!--stylesheets -->
-    <link rel="stylesheet" href="./Anhang/css/main.css" />
-    <link rel="stylesheet" href="./Anhang/css/shop.css" />
-
-
+    <link rel="stylesheet" href="./Anhang/css/main.css">
+    <link rel="stylesheet" href="./Anhang/css/shop.css">
 
   <body>
-    
     <!-- Navigationsbereich -->
     <header class="header" id="header">
+      
       <nav class="navbar container">
         <a href="./index.html" class="Logo">
           <h2 class="logo">Vesticum</h2>
@@ -31,7 +28,7 @@
         <div class="menu" id="menu">
           <ul class="list">
             <li class="list-item">
-              <a href="./index.html" class="list-link ">Startseite</a>
+              <a href="#" class="list-link current ">Startseite</a>
             </li>
             <li class="list-item">
               <a href="./Produktübersicht.html" class="list-link ">Produktübersicht</a>
@@ -40,7 +37,7 @@
               <a href="./Informationsbereich.html" class="list-link">Informationen</a>
             </li>
             <li class="list-item">
-              <a href="#" class="list-link current">Shop</a>
+              <a href="./Shop.html" class="list-link">Shop</a>
             </li>
 
             <li class="list-item screen-lg-hidden">
@@ -49,20 +46,32 @@
           </ul>
         </div>
 
-        <button
-          class="btn place-items-center screen-lg-hidden menu-toggle-icon"
-          id="menu-toggle-icon"
-        >
-        
-          <i class="ri-menu-3-line open-menu-icon"></i>
-          <i class="ri-close-line close-menu-icon"></i>
-        </button>
+      
 
-        <a href="./Login.html" class="list-link screen-sm-hidden">Login</a>
-    </nav>
-  </header>
+          <button class="btn place-items-center" id="search-icon">
+          </button>
+
+          <button
+            class="btn place-items-center screen-lg-hidden menu-toggle-icon"
+            id="menu-toggle-icon"
+          >
+          
+            <i class="ri-menu-3-line open-menu-icon"></i>
+            <i class="ri-close-line close-menu-icon"></i>
+          </button>
+
+          <a href="./Login.html" class="list-link screen-sm-hidden">Login</a>
+      </nav>
+    </header>
 
     
+    <div class="search-form-container container" id="search-form-container">
+      <button
+        class="btn form-close-btn place-items-center"
+        id="form-close-btn">
+      </button>
+    </div>
+
 <!--SIDEMENÜ-->
     <div class="sidebar">
      <a href="#E-Book" class="Liste">E-Book </a>
@@ -86,11 +95,11 @@
 
     <div class="blog">
       <div class="blog-image">
-        <img src="./Icons/Zeichenfläche 1.png" class="blog-image" >
+        <img src="./Anhang/images/Buch.png" alt="E-Book" class="blog-image" >
     </div>
 
       <div class="blog-header">
-        <img src="/Icons/user.svg" alt="" width="50px">
+        <img src="/Icons/user.svg" alt="icon" width="50">
 
         <h3  id="E-Book">E-Book</h3> <!--mit dem id kann ich im sidebar es hier verlinken-->
 
@@ -102,7 +111,7 @@
          
           </div>
 
-           <button class="cart"type="button">Warenkorb <i class="fa fa-shopping-cart"></i>
+           <button class="cart" type="button">Warenkorb <i class="fa fa-shopping-cart"></i>
           </button>
           
         </div>
@@ -113,11 +122,11 @@
 <!-- zweites produkt-->
   <div class="blog">
     <div class="blog-image">
-      <img src="./Icons/Zeichenfläche 1.png" class="blog-image" >
+      <img src="./Anhang/images/Buch.png" alt="Buch" class="blog-image" >
   </div>
 
     <div class="blog-header">
-      <img src="/Icons/user.svg" alt="" width="50px">
+      <img src="/Icons/user.svg" alt="Buch" width="50">
 
       <h3  id="Buch">Buch</h3>
 
@@ -129,7 +138,7 @@
          
         </div>
   
-        <button class="cart"type="button">Warenkorb <i class="fa fa-shopping-cart"></i>
+        <button class="cart" type="button">Warenkorb <i class="fa fa-shopping-cart"></i>
         </button>
 
       </div>
@@ -138,8 +147,6 @@
          
   </div>
          
-</div>
-
 
 
 
@@ -176,7 +183,7 @@
 					<i class="mitglieder"></i>
 					<p> <span>Mitglieder</span></p>
           <p>Sema Erdal</p>
-          <p>Jennifer </p>
+          <p>Jennifer Melchert </p>
 				</div>
 			</div>
 

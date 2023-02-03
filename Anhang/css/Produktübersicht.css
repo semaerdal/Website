@@ -174,7 +174,6 @@ h4{
     float: left;
     width: 180px;
     height: fit-content;
-    padding: auto;
     border-radius: 1.5rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
@@ -387,27 +386,22 @@ footer{
    
 }
 
-  
-
-
-
-@media screen and (min-width: 768px) {
-
-    .blog .article{
-        grid-template-columns: 20rem 1fr;
-        
-    }
-
-    
-}
-
 
 @media screen and (max-width: 768px) {
 
-    .blog-image, .blog-header img, .msg, .Standort{
+    .blog-image, .blog-header img, .Standort,.sidebar{
         display: none;
     }
-    
+
+    .blog, h1{
+        display:inline-block;
+        overflow: hidden;
+        align-items: center;
+     }
+      .blog{
+        position: relative;
+        right: 5em;
+          }
     
 }
 

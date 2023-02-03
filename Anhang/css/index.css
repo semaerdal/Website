@@ -137,7 +137,10 @@ h1{
 /*Bild über uns einstellung*/
 .Why .row .img-container{
     flex:40rem;
+    height: 450px;;
+    display:flex;
 }
+
 
 .Why .row .content{
     flex:1 1 40rem;
@@ -166,7 +169,6 @@ section{
 .heading2{
     text-align: center;
     font-size: 50px;
-    font-weight: 700px;
     color:#ffffff;
     padding:1rem;
     margin:2rem 0;
@@ -194,12 +196,6 @@ section{
     padding-bottom: 3rem;
 }
 
-
-
-/*Bild über uns einstellung*/
-.gliederung .row .img-container{
-    flex:40rem;
-}
 
 .gliederung .row .content{
     flex:1 1 40rem;
@@ -231,10 +227,10 @@ section{
 .heading{
     text-align:center;
     font-size: 50px;
-    font-weight: 900px;
-    color:#000;
+    color:#28682c;
     padding:1rem;
     margin:2rem 0;
+    background-color:rgb(0, 67, 18, 0.5);
     }
 /*"Über" text teil*/
 .heading span{
@@ -259,7 +255,9 @@ section{
 
 /*Bild über uns einstellung*/
 .about .row .img-container{
-    flex:55rem;
+
+    width: 100%;
+
 }
 
 .about .row .content{
@@ -292,14 +290,13 @@ section{
 .heading{
     text-align:center;
     font-size: 50px;
-    font-weight: 900px;
-    color:#000;
+    color:#ffffff;
     padding:1rem;
     margin:2rem 0;
     }
 /*"Über" text teil*/
 .heading span{
-    color:#28682c;
+    color:#023020;
 }
 
 /*Gliederung bereich Ende*/
@@ -311,7 +308,6 @@ section{
 .heading3{
     text-align: center;
     font-size: 50px;
-    font-weight: 700px;
     color:#ffffff;
     padding:1rem;
     margin:2rem 0;

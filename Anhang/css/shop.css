@@ -1,3 +1,4 @@
+
 /* Header */
 .header{
   background-color: var(--secondary-background-color);
@@ -7,7 +8,9 @@
   width: 100%;
   z-index: 999;
 }
-
+#search-icon{
+display: none;
+}
 .navbar{
   display: flex;
   align-items: center;
@@ -53,8 +56,6 @@
 .list-link:hover{
   color: var(--light-color);
 }
-
-
 
 /*SIDEMENÜ*/
 .sidebar{
@@ -182,7 +183,6 @@ h4{
   float: left;
   width: 180px;
   height:min-content;
-  padding: auto;
   border-radius: 1.5rem;
   
 }
@@ -372,5 +372,20 @@ margin-bottom: 2rem;
  
 }
 
+@media screen and (max-width: 768px) {
 
+  .blog-image,.sidebar{
+      display: none;
+  }
+
+  h1{
+    display:inline-block;
+    overflow: hidden;
+    align-items: center;
+  }
+  .blog{
+    align-self: center;
+  }
+
+}
 

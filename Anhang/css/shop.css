@@ -11,6 +11,9 @@
 #search-icon{
 display: none;
 }
+.menu-toggle-icon{
+  background-color: #132727;
+}
 .navbar{
   display: flex;
   align-items: center;
@@ -56,6 +59,9 @@ display: none;
 .list-link:hover{
   color: var(--light-color);
 }
+
+
+
 
 /*SIDEMENÜ*/
 .sidebar{
@@ -343,7 +349,7 @@ margin-bottom: 2rem;
 
 
 @media screen and (min-width: 1024px) {
- 
+   
   .menu{
       position: static;
       width: initial;

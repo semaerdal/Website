@@ -89,20 +89,6 @@ i{
     
 }
 
-/*  macht grad keinen unterschied mehr?? idk why
-.navbar{
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    padding-block: 2rem;
-}
-*/
-
-/*.logo{
-    font-size: var(--font-size-md);
-    color: #eef3ec;
-}
-*/
 .btn{
     cursor: pointer;
 }
@@ -168,13 +154,6 @@ i{
 
 }
 
-
-.Faden{
-    position:absolute;
-    left: 70em;
-    z-index: -1;
-  
-  }
 
   
 

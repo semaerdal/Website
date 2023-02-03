@@ -140,6 +140,10 @@ h4{
     color:#ffffff;
 }
 
+.page-link{
+    
+    background-color: #132727;
+}
 
 .blog ,.content{
     background-color: var(--secondary-background-color);
